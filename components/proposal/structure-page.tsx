@@ -71,7 +71,7 @@ export function StructurePage() {
             <div className="shrink-0 px-8 pt-6 pb-4 border-b border-zinc-200 dark:border-zinc-900 bg-white dark:bg-zinc-950/50 backdrop-blur-sm z-10">
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
                     <div>
-                        <div className="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-[#FF0055]/10 text-[#FF0055] text-[10px] font-bold tracking-wider uppercase border border-[#FF0055]/20 mb-2">
+                        <div className="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-ghipss-blue/10 text-ghipss-blue text-[10px] font-bold tracking-wider uppercase border border-ghipss-blue/20 mb-2">
                             Page 3 — Information Architecture
                         </div>
                         <h2 className="text-2xl md:text-3xl font-bold text-zinc-900 dark:text-white mb-1">
@@ -138,12 +138,12 @@ export function StructurePage() {
                                 <div className={cn(
                                     "w-full p-2.5 rounded-lg border flex flex-col items-center gap-2 text-center transition-all duration-300 relative group z-10",
                                     nav.highlight
-                                        ? "bg-[#FF0055] border-[#FF0055] text-white shadow-md shadow-[#FF0055]/20"
-                                        : "bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-800 hover:border-[#FF0055]/50 hover:shadow-sm"
+                                        ? "bg-ghipss-blue border-ghipss-blue text-white shadow-md shadow-ghipss-blue/20"
+                                        : "bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-800 hover:border-ghipss-blue/50 hover:shadow-sm"
                                 )}>
                                     <div className={cn(
                                         "p-1.5 rounded-md",
-                                        nav.highlight ? "bg-white/20" : "bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400 group-hover:text-[#FF0055]"
+                                        nav.highlight ? "bg-white/20" : "bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400 group-hover:text-ghipss-blue"
                                     )}>
                                         <nav.icon className="w-4 h-4" />
                                     </div>
@@ -213,7 +213,7 @@ export function StructurePage() {
                     </div>
                 </div>
 
-                <div className="flex items-center gap-2 group cursor-pointer hover:text-[#FF0055] transition-colors ml-4 shrink-0">
+                <div className="flex items-center gap-2 group cursor-pointer hover:text-ghipss-blue transition-colors ml-4 shrink-0">
                     <span className="font-bold text-zinc-900 dark:text-white uppercase tracking-wider text-xs">Next: UX/UI Direction</span>
                     <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
                 </div>

@@ -41,11 +41,11 @@ export function MigrationPage() {
 
                     {/* Header */}
                     <div>
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF0055]/10 text-[#FF0055] text-[10px] font-bold tracking-wider uppercase border border-[#FF0055]/20 mb-4">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-ghipss-blue/10 text-ghipss-blue text-[10px] font-bold tracking-wider uppercase border border-ghipss-blue/20 mb-4">
                             Page 6 — Execution
                         </div>
                         <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white mb-6">
-                            Migration, QA & <br /><span className="text-[#FF0055]">Go-Live.</span>
+                            Migration, QA & <br /><span className="text-ghipss-blue">Go-Live.</span>
                         </h2>
                         <p className="text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed font-light">
                             We test the site like a product, not a brochure. A smooth transition with minimal downtime and zero data loss.
@@ -55,7 +55,7 @@ export function MigrationPage() {
                     {/* 1. Content Migration */}
                     <motion.div variants={itemVariant} className="space-y-6">
                         <h3 className="text-lg font-bold text-zinc-900 dark:text-white flex items-center gap-2">
-                            <RefreshCw className="w-5 h-5 text-[#FF0055]" />
+                            <RefreshCw className="w-5 h-5 text-ghipss-blue" />
                             Structured Content Migration
                         </h3>
 
@@ -107,7 +107,7 @@ export function MigrationPage() {
                     {/* 2. QA Testing Grid */}
                     <motion.div variants={itemVariant} className="space-y-6">
                         <h3 className="text-lg font-bold text-zinc-900 dark:text-white flex items-center gap-2">
-                            <Search className="w-5 h-5 text-[#FF0055]" />
+                            <Search className="w-5 h-5 text-ghipss-blue" />
                             Comprehensive QA Testing
                         </h3>
 
@@ -118,7 +118,7 @@ export function MigrationPage() {
                                 { icon: Zap, title: "Performance", desc: "Load speeds, image optim., caching" },
                                 { icon: ShieldCheck, title: "Security", desc: "SSL, headers, access control audits" },
                             ].map((test, i) => (
-                                <div key={i} className="p-4 rounded-lg bg-zinc-50 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 hover:border-[#FF0055]/30 transition-colors">
+                                <div key={i} className="p-4 rounded-lg bg-zinc-50 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 hover:border-ghipss-blue/30 transition-colors">
                                     <test.icon className="w-5 h-5 text-zinc-400 mb-3" />
                                     <div className="font-bold text-zinc-900 dark:text-white text-sm mb-1">{test.title}</div>
                                     <div className="text-xs text-zinc-500">{test.desc}</div>
@@ -161,7 +161,7 @@ export function MigrationPage() {
                     {/* 4. Go-Live Timeline */}
                     <div className="space-y-6">
                         <h3 className="text-xl font-bold flex items-center gap-3 text-white">
-                            <Rocket className="w-6 h-6 text-[#FF0055]" />
+                            <Rocket className="w-6 h-6 text-ghipss-blue" />
                             Go-Live Plan
                         </h3>
 
@@ -177,7 +177,7 @@ export function MigrationPage() {
                                 { title: "Verification", desc: "Verify live links & forms." },
                             ].map((step, i) => (
                                 <motion.div variants={itemVariant} key={i} className="relative pl-6">
-                                    <div className="absolute left-0 top-1.5 w-3.5 h-3.5 rounded-full border-2 border-[#FF0055] bg-zinc-950 z-10" />
+                                    <div className="absolute left-0 top-1.5 w-3.5 h-3.5 rounded-full border-2 border-ghipss-blue bg-zinc-950 z-10" />
                                     <h4 className="font-bold text-white text-sm mb-0.5">{step.title}</h4>
                                     <p className="text-xs text-zinc-400">{step.desc}</p>
                                 </motion.div>
@@ -186,22 +186,22 @@ export function MigrationPage() {
                     </div>
 
                     {/* SEO Safety Net */}
-                    <div className="bg-[#FF0055]/10 border border-[#FF0055]/20 p-5 rounded-xl">
-                        <h4 className="text-sm font-bold text-[#FF0055] mb-2 flex items-center gap-2">
+                    <div className="bg-ghipss-blue/10 border border-ghipss-blue/20 p-5 rounded-xl">
+                        <h4 className="text-sm font-bold text-ghipss-blue mb-2 flex items-center gap-2">
                             <Flag className="w-4 h-4" />
                             Post-Launch Safety Net
                         </h4>
                         <ul className="space-y-2 text-xs text-zinc-300">
                             <li className="flex gap-2">
-                                <span className="text-[#FF0055]">•</span>
+                                <span className="text-ghipss-blue">•</span>
                                 301 Redirects map old URLs to new ones
                             </li>
                             <li className="flex gap-2">
-                                <span className="text-[#FF0055]">•</span>
+                                <span className="text-ghipss-blue">•</span>
                                 Hypercare support window (7-14 days)
                             </li>
                             <li className="flex gap-2">
-                                <span className="text-[#FF0055]">•</span>
+                                <span className="text-ghipss-blue">•</span>
                                 Immediate sitemap submission to Google
                             </li>
                         </ul>
@@ -210,10 +210,10 @@ export function MigrationPage() {
                     {/* Navigation Hint */}
                     <div className="flex justify-end pt-4">
                         <div className="group cursor-pointer flex flex-col items-end">
-                            <span className="text-[10px] uppercase tracking-widest text-[#FF0055] mb-1 font-semibold">Next Up</span>
-                            <div className="flex items-center gap-2 text-white font-bold text-lg hover:underline decoration-[#FF0055] decoration-2 underline-offset-4 transition-all">
+                            <span className="text-[10px] uppercase tracking-widest text-ghipss-blue mb-1 font-semibold">Next Up</span>
+                            <div className="flex items-center gap-2 text-white font-bold text-lg hover:underline decoration-ghipss-blue decoration-2 underline-offset-4 transition-all">
                                 Costs & Timeline
-                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform text-[#FF0055]" />
+                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform text-ghipss-blue" />
                             </div>
                         </div>
                     </div>

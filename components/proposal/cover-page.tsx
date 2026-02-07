@@ -7,25 +7,16 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useBook } from "./book-layout";
 import Image from "next/image";
-
-const ALLOWED_EMAILS = [
-    "demo@ghipss.com",
-    "review@ghipss.com",
-    "admin@ananseum.com",
-    "test@test.com",
-    "opare@ananseum.com",
-    "alfyopare@gmail.com",
-    "admin"
-];
+import { checkWhitelist, logSessionStart } from "@/lib/analytics";
 
 export function CoverPage() {
-    const { unlock, setUserName } = useBook();
+    const { unlock, setUserName, setSessionId } = useBook();
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [error, setError] = useState("");
     const [isLoading, setIsLoading] = useState(false);
 
-    const handleUnlock = (e: React.FormEvent) => {
+    const handleUnlock = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsLoading(true);
         setError("");
@@ -36,26 +27,38 @@ export function CoverPage() {
             return;
         }
 
-        setTimeout(() => {
-            const isValid = email.toLowerCase().endsWith("@ghipss.com") || ALLOWED_EMAILS.includes(email.toLowerCase());
+        try {
+            const isValid = await checkWhitelist(email);
 
             if (isValid) {
-                setUserName(name.split(" ")[0]); // Store first name
+                // Determine device type
+                const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+                const device = isMobile ? "mobile" : "desktop";
+
+                // Log session start
+                const sessionId = await logSessionStart(name, email, device);
+                setSessionId(sessionId);
+
+                setUserName(name.split(" ")[0]);
                 unlock();
             } else {
                 setError("Email not authorized. Please use your official GhIPSS email.");
                 setIsLoading(false);
             }
-        }, 800);
+        } catch (err) {
+            console.error("Auth check failed:", err);
+            setError("Connection error. Please try again.");
+            setIsLoading(false);
+        }
     };
 
     return (
-        <div className="h-full w-full flex flex-col md:flex-row bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-white relative overflow-hidden transition-colors duration-300">
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-zinc-200 dark:from-zinc-900 via-[#FF0055] to-zinc-200 dark:to-zinc-900 z-10" />
+        <div className="min-h-full md:h-full w-full flex flex-col md:flex-row bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-white relative overflow-visible md:overflow-hidden transition-colors duration-300">
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-zinc-200 dark:from-zinc-900 via-ghipss-blue to-zinc-200 dark:to-zinc-900 z-10" />
 
             {/* Left Column */}
             <div className="w-full md:w-1/2 flex flex-col justify-between border-r border-zinc-200 dark:border-zinc-900 bg-white/50 dark:bg-zinc-950/50 relative p-8 md:p-12 lg:p-16">
-                <div className="absolute top-20 left-20 w-96 h-96 bg-[#FF0055]/5 rounded-full blur-[120px] pointer-events-none" />
+                <div className="absolute top-20 left-20 w-96 h-96 bg-ghipss-blue/5 rounded-full blur-[120px] pointer-events-none" />
 
                 {/* Logos - SIGNIFICANTLY INCREASED SIZE */}
                 <div className="flex gap-12 items-center z-10 shrink-0 h-40">
@@ -87,7 +90,7 @@ export function CoverPage() {
                     <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-zinc-900 dark:text-white">
                         Development, Hosting & Management of the New GhIPSS Corporate Website
                     </h1>
-                    <p className="text-lg text-zinc-600 dark:text-zinc-400 font-light leading-relaxed max-w-md border-l-2 border-[#FF0055] pl-6">
+                    <p className="text-lg text-zinc-600 dark:text-zinc-400 font-light leading-relaxed max-w-md border-l-2 border-ghipss-blue pl-6">
                         A modern, secure, content-rich digital presence that reflects GhIPSS’ strategic positioning as Ghana’s national payments infrastructure provider.
                     </p>
                 </div>
@@ -107,7 +110,7 @@ export function CoverPage() {
             </div>
 
             {/* Right Column */}
-            <div className="w-full md:w-1/2 flex flex-col justify-center relative p-8 md:p-12 lg:p-16 overflow-hidden">
+            <div className="w-full md:w-1/2 flex flex-col justify-center relative p-8 md:p-12 lg:p-16 min-h-[500px] md:min-h-0">
                 {/* VIDEO BACKGROUND */}
                 <div className="absolute inset-0 z-0 bg-black">
                     <video
@@ -138,14 +141,14 @@ export function CoverPage() {
                         </div>
                         <div>
                             <span className="block text-zinc-400 mb-1 uppercase tracking-widest text-[10px]">Go-Live Target</span>
-                            <span className="text-[#FF0055] font-bold text-sm">31 July 2026</span>
+                            <span className="text-ghipss-blue font-bold text-sm">31 July 2026</span>
                         </div>
                     </div>
 
                     {/* Unlock Gate */}
                     <div className="bg-black/60 backdrop-blur-xl border border-white/10 rounded-xl p-8 shadow-2xl">
-                        <div className="flex items-center gap-3 mb-6 text-[#FF0055]">
-                            <div className="p-2 bg-[#FF0055]/10 rounded-lg">
+                        <div className="flex items-center gap-3 mb-6 text-ghipss-blue">
+                            <div className="p-2 bg-ghipss-blue/10 rounded-lg">
                                 <Lock className="w-5 h-5" />
                             </div>
                             <span className="font-mono text-sm uppercase tracking-wider font-bold">Confidential Access</span>
@@ -160,7 +163,7 @@ export function CoverPage() {
                             <Input
                                 type="text"
                                 placeholder="Enter your name"
-                                className="bg-zinc-900/50 border-white/10 text-white placeholder:text-zinc-500 h-11 focus-visible:ring-[#FF0055]"
+                                className="bg-zinc-900/50 border-white/10 text-white placeholder:text-zinc-500 h-11 focus-visible:ring-ghipss-blue"
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
                                 required
@@ -169,7 +172,7 @@ export function CoverPage() {
                             <Input
                                 type="email"
                                 placeholder="Enter your invited email address..."
-                                className="bg-zinc-900/50 border-white/10 text-white placeholder:text-zinc-500 h-11 focus-visible:ring-[#FF0055]"
+                                className="bg-zinc-900/50 border-white/10 text-white placeholder:text-zinc-500 h-11 focus-visible:ring-ghipss-blue"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 required
@@ -177,7 +180,7 @@ export function CoverPage() {
                             />
                             <Button
                                 type="submit"
-                                className="w-full bg-[#FF0055] hover:bg-[#D90049] text-white h-11"
+                                className="w-full bg-ghipss-blue hover:bg-[#002244] text-white h-11"
                                 disabled={isLoading}
                             >
                                 {isLoading ? "Verifying..." : "Unlock Proposal"}

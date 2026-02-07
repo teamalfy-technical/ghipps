@@ -44,11 +44,11 @@ export function UxUiPage() {
                 <motion.div variants={container} initial="hidden" animate="show" className="space-y-12">
                     {/* Header */}
                     <div>
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF0055]/10 text-[#FF0055] text-[10px] font-bold tracking-wider uppercase border border-[#FF0055]/20 mb-4">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-ghipss-blue/10 text-ghipss-blue text-[10px] font-bold tracking-wider uppercase border border-ghipss-blue/20 mb-4">
                             Page 4 — UX/UI Direction
                         </div>
                         <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white mb-6">
-                            Design that builds <br /><span className="text-[#FF0055]">Trust.</span>
+                            Design that builds <br /><span className="text-ghipss-blue">Trust.</span>
                         </h2>
                         <p className="text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
                             Our approach balances institutional authority with modern digital agility. We don't just decorate; we design for clarity and discoverability.
@@ -84,11 +84,11 @@ export function UxUiPage() {
                             }
                         ].map((item, i) => (
                             <motion.div variants={itemVariant} key={i} className="flex gap-4 group">
-                                <div className="shrink-0 p-3 rounded-xl bg-zinc-50 dark:bg-zinc-900 text-zinc-400 group-hover:text-[#FF0055] group-hover:bg-[#FF0055]/5 transition-colors">
+                                <div className="shrink-0 p-3 rounded-xl bg-zinc-50 dark:bg-zinc-900 text-zinc-400 group-hover:text-ghipss-blue group-hover:bg-ghipss-blue/5 transition-colors">
                                     <item.icon className="w-6 h-6" strokeWidth={1.5} />
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-zinc-900 dark:text-white mb-1 group-hover:text-[#FF0055] transition-colors">{item.title}</h4>
+                                    <h4 className="font-bold text-zinc-900 dark:text-white mb-1 group-hover:text-ghipss-blue transition-colors">{item.title}</h4>
                                     <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
                                         {item.desc}
                                     </p>
@@ -108,7 +108,7 @@ export function UxUiPage() {
                     {/* Visual Language Section */}
                     <div>
                         <h3 className="text-xl font-bold text-zinc-900 dark:text-white mb-6 flex items-center gap-2">
-                            <Eye className="w-5 h-5 text-[#FF0055]" />
+                            <Eye className="w-5 h-5 text-ghipss-blue" />
                             Visual Language System
                         </h3>
 
@@ -145,7 +145,7 @@ export function UxUiPage() {
                                     <Component className="w-4 h-4" /> Components
                                 </div>
                                 <div className="space-y-3">
-                                    <Button className="w-full justify-between bg-[#FF0055] hover:bg-[#D90049] text-white">
+                                    <Button className="w-full justify-between bg-ghipss-blue hover:bg-[#002244] text-white">
                                         Primary Action <ArrowRight className="w-4 h-4" />
                                     </Button>
                                     <Button variant="outline" className="w-full justify-between border-zinc-200 dark:border-zinc-800 hover:bg-zinc-50 dark:hover:bg-zinc-900">
@@ -164,7 +164,7 @@ export function UxUiPage() {
 
                             {/* Card 3: Layout & Spacing */}
                             <motion.div variants={itemVariant} className="sm:col-span-2 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 p-6 rounded-2xl shadow-xl overflow-hidden relative group">
-                                <div className="absolute top-0 right-0 p-24 bg-[#FF0055] blur-[80px] opacity-20 group-hover:opacity-30 transition-opacity" />
+                                <div className="absolute top-0 right-0 p-24 bg-ghipss-blue blur-[80px] opacity-20 group-hover:opacity-30 transition-opacity" />
                                 <div className="relative z-10 flex flex-col sm:flex-row gap-8 items-start sm:items-center justify-between">
                                     <div>
                                         <div className="flex items-center gap-2 mb-2 text-xs font-bold uppercase tracking-widest opacity-60">
@@ -199,7 +199,7 @@ export function UxUiPage() {
                                 { name: "Media Centre", desc: "News categories, assets & press kits" },
                             ].map((comp, i) => (
                                 <div key={i} className="flex gap-3 items-start">
-                                    <div className="w-1.5 h-1.5 rounded-full bg-[#FF0055] mt-2 shrink-0" />
+                                    <div className="w-1.5 h-1.5 rounded-full bg-ghipss-blue mt-2 shrink-0" />
                                     <div>
                                         <div className="font-bold text-zinc-900 dark:text-white text-sm">{comp.name}</div>
                                         <div className="text-xs text-zinc-500 dark:text-zinc-400">{comp.desc}</div>
@@ -212,10 +212,10 @@ export function UxUiPage() {
                     {/* Navigation Hint */}
                     <div className="flex justify-end pt-4">
                         <div className="group cursor-pointer flex flex-col items-end">
-                            <span className="text-[10px] uppercase tracking-widest text-[#FF0055] mb-1 font-semibold">Next Up</span>
-                            <div className="flex items-center gap-2 text-zinc-900 dark:text-white font-bold text-lg hover:underline decoration-[#FF0055] decoration-2 underline-offset-4 transition-all">
+                            <span className="text-[10px] uppercase tracking-widest text-ghipss-blue mb-1 font-semibold">Next Up</span>
+                            <div className="flex items-center gap-2 text-zinc-900 dark:text-white font-bold text-lg hover:underline decoration-ghipss-blue decoration-2 underline-offset-4 transition-all">
                                 Technical Approach
-                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform text-[#FF0055]" />
+                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform text-ghipss-blue" />
                             </div>
                         </div>
                     </div>

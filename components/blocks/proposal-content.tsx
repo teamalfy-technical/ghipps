@@ -1,24 +1,24 @@
 "use client";
 
 import React from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, Variants } from "framer-motion";
 import { Check, Shield, Server, Clock, Users, FileText, Smartphone, Globe, Search, Calendar, BarChart3, Database, Lock, HeadphonesIcon, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SpotlightCard } from "@/components/ui/spotlight-card";
 import { cn } from "@/lib/utils";
 
 // Animation variants
-const fadeInUp = {
+const fadeInUp: Variants = {
     hidden: { opacity: 0, y: 40 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } }
 };
 
-const fadeInScale = {
+const fadeInScale: Variants = {
     hidden: { opacity: 0, scale: 0.95 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: "easeOut" } }
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: "easeOut" as const } }
 };
 
-const staggerContainer = {
+const staggerContainer: Variants = {
     hidden: { opacity: 0 },
     visible: {
         opacity: 1,
@@ -73,10 +73,10 @@ export function ProposalContent() {
                             variants={fadeInUp}
                             whileHover={{ scale: 1.02, y: -4 }}
                             transition={{ duration: 0.3 }}
-                            className="bg-zinc-900/30 border border-zinc-800 rounded-2xl p-8 hover:border-[#FF0055]/30 transition-colors"
+                            className="bg-zinc-900/30 border border-zinc-800 rounded-2xl p-8 hover:border-ghipss-blue/30 transition-colors"
                         >
                             <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
-                                <Globe className="text-[#FF0055]" /> TOR Objectives
+                                <Globe className="text-ghipss-blue" /> TOR Objectives
                             </h3>
                             <ul className="space-y-4 text-zinc-300">
                                 {[
@@ -90,7 +90,7 @@ export function ProposalContent() {
                                         variants={fadeInUp}
                                         className="flex gap-3"
                                     >
-                                        <Check className="w-5 h-5 text-[#FF0055] shrink-0 mt-0.5" />
+                                        <Check className="w-5 h-5 text-ghipss-blue shrink-0 mt-0.5" />
                                         <span>{text}</span>
                                     </motion.li>
                                 ))}
@@ -105,7 +105,7 @@ export function ProposalContent() {
                         >
                             <SpotlightCard className="p-8 h-full" spotlightColor="rgba(0, 255, 200, 0.15)">
                                 <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
-                                    <Shield className="text-[#FF0055]" /> Our Approach
+                                    <Shield className="text-ghipss-blue" /> Our Approach
                                 </h3>
                                 <p className="text-zinc-400 mb-6">We will deliver the new GhIPSS website as a governed content platform:</p>
                                 <ul className="space-y-4 text-zinc-300">
@@ -118,9 +118,9 @@ export function ProposalContent() {
                                         <motion.li key={i} variants={fadeInUp} className="flex gap-3">
                                             <motion.div
                                                 whileHover={{ scale: 1.1, rotate: 5 }}
-                                                className="w-8 h-8 bg-[#FF0055]/20 rounded-lg flex items-center justify-center shrink-0"
+                                                className="w-8 h-8 bg-ghipss-blue/20 rounded-lg flex items-center justify-center shrink-0"
                                             >
-                                                <span className="text-[#FF0055] font-bold text-sm">{item.num}</span>
+                                                <span className="text-ghipss-blue font-bold text-sm">{item.num}</span>
                                             </motion.div>
                                             <div>
                                                 <div className="font-medium text-white">{item.title}</div>
@@ -162,11 +162,11 @@ export function ProposalContent() {
                                 key={item.num}
                                 variants={fadeInScale}
                                 whileHover={{ scale: 1.05, y: -4 }}
-                                className="bg-zinc-950 border border-zinc-800 rounded-xl p-4 text-center hover:border-[#FF0055]/50 transition-colors cursor-pointer"
+                                className="bg-zinc-950 border border-zinc-800 rounded-xl p-4 text-center hover:border-ghipss-blue/50 transition-colors cursor-pointer"
                             >
                                 <motion.div
                                     whileHover={{ scale: 1.2 }}
-                                    className="text-[#FF0055] font-mono text-sm mb-2"
+                                    className="text-ghipss-blue font-mono text-sm mb-2"
                                 >
                                     {item.num}
                                 </motion.div>
@@ -263,12 +263,12 @@ export function ProposalContent() {
                         >
                             <SpotlightCard className="p-8 h-full">
                                 <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
-                                    <Server className="text-[#FF0055]" /> We Will Provide
+                                    <Server className="text-ghipss-blue" /> We Will Provide
                                 </h3>
                                 <ul className="space-y-3 text-zinc-300">
                                     {["Secure, reliable hosting services", "Domain management where required", "SSL certificate provisioning and renewal", "Backups, uptime monitoring, reliability controls"].map((text, i) => (
                                         <motion.li key={i} variants={fadeInUp} className="flex gap-3">
-                                            <Check className="w-5 h-5 text-[#FF0055] shrink-0" /> {text}
+                                            <Check className="w-5 h-5 text-ghipss-blue shrink-0" /> {text}
                                         </motion.li>
                                     ))}
                                 </ul>
@@ -280,12 +280,12 @@ export function ProposalContent() {
                         >
                             <SpotlightCard className="p-8 h-full">
                                 <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
-                                    <Lock className="text-[#FF0055]" /> Operational Controls
+                                    <Lock className="text-ghipss-blue" /> Operational Controls
                                 </h3>
                                 <ul className="space-y-3 text-zinc-300">
                                     {["Role-based admin access (least-privilege)", "Activity/audit logging for publishing actions", "Patch management and routine updates", "Scheduled backup verification and restore tests", "Performance monitoring + incident reporting"].map((text, i) => (
                                         <motion.li key={i} variants={fadeInUp} className="flex gap-3">
-                                            <Check className="w-5 h-5 text-[#FF0055] shrink-0" /> {text}
+                                            <Check className="w-5 h-5 text-ghipss-blue shrink-0" /> {text}
                                         </motion.li>
                                     ))}
                                 </ul>
@@ -406,9 +406,9 @@ export function ProposalContent() {
                                 key={i}
                                 variants={fadeInScale}
                                 whileHover={{ scale: 1.05, y: -4 }}
-                                className="bg-zinc-950 border border-zinc-800 rounded-xl p-6 text-center hover:border-[#FF0055]/30 transition-colors cursor-pointer"
+                                className="bg-zinc-950 border border-zinc-800 rounded-xl p-6 text-center hover:border-ghipss-blue/30 transition-colors cursor-pointer"
                             >
-                                <div className="text-[#FF0055] font-mono text-sm mb-2">{item.period}</div>
+                                <div className="text-ghipss-blue font-mono text-sm mb-2">{item.period}</div>
                                 <div className="text-white font-medium">{item.title}</div>
                                 <div className="text-zinc-500 text-sm">{item.desc}</div>
                             </motion.div>
@@ -430,7 +430,7 @@ export function ProposalContent() {
                         whileInView="visible"
                         viewport={{ once: true }}
                         whileHover={{ scale: 1.01 }}
-                        className="bg-zinc-900/30 border border-zinc-800 rounded-2xl p-8 mt-12 hover:border-[#FF0055]/30 transition-colors"
+                        className="bg-zinc-900/30 border border-zinc-800 rounded-2xl p-8 mt-12 hover:border-ghipss-blue/30 transition-colors"
                     >
                         <p className="text-zinc-300 mb-6">
                             We will coordinate a structured handover and ensure full transfer of:
@@ -450,7 +450,7 @@ export function ProposalContent() {
                                 { icon: Shield, text: "Full administrative access and technical documentation" }
                             ].map((item, i) => (
                                 <motion.li key={i} variants={fadeInUp} className="flex gap-3 text-zinc-300">
-                                    <item.icon className="w-5 h-5 text-[#FF0055] shrink-0" />
+                                    <item.icon className="w-5 h-5 text-ghipss-blue shrink-0" />
                                     <span>{item.text}</span>
                                 </motion.li>
                             ))}
@@ -491,11 +491,11 @@ export function ProposalContent() {
                                 <tbody className="divide-y divide-zinc-800 text-zinc-300">
                                     <tr className="hover:bg-zinc-900/50 transition-colors">
                                         <td className="p-4 font-medium text-white">Design & Discovery</td>
-                                        <td className="p-4 text-right font-mono text-[#FF0055]">GHS 56,000</td>
+                                        <td className="p-4 text-right font-mono text-ghipss-blue">GHS 56,000</td>
                                     </tr>
                                     <tr className="hover:bg-zinc-900/50 transition-colors">
                                         <td className="p-4 font-medium text-white">Development & Migration</td>
-                                        <td className="p-4 text-right font-mono text-[#FF0055]">GHS 89,000</td>
+                                        <td className="p-4 text-right font-mono text-ghipss-blue">GHS 89,000</td>
                                     </tr>
                                     <tr className="bg-zinc-900/50">
                                         <td className="p-4 font-bold text-white">One-Time Total</td>
@@ -514,11 +514,11 @@ export function ProposalContent() {
                                 <tbody className="divide-y divide-zinc-800 text-zinc-300">
                                     <tr className="hover:bg-zinc-900/50 transition-colors">
                                         <td className="p-4 font-medium text-white">Hosting & Security</td>
-                                        <td className="p-4 text-right font-mono text-[#FF0055]">GHS 65,000 / year</td>
+                                        <td className="p-4 text-right font-mono text-ghipss-blue">GHS 65,000 / year</td>
                                     </tr>
                                     <tr className="hover:bg-zinc-900/50 transition-colors">
                                         <td className="p-4 font-medium text-white">Support & Maintenance Retainer</td>
-                                        <td className="p-4 text-right font-mono text-[#FF0055]">GHS 48,000 / year</td>
+                                        <td className="p-4 text-right font-mono text-ghipss-blue">GHS 48,000 / year</td>
                                     </tr>
                                     <tr className="bg-zinc-900/50">
                                         <td className="p-4 font-bold text-white">Year 2+ Recurring Total</td>
@@ -532,7 +532,7 @@ export function ProposalContent() {
                         <motion.div
                             variants={fadeInScale}
                             whileHover={{ scale: 1.02 }}
-                            className="bg-[#FF0055]/10 border border-[#FF0055]/30 rounded-xl p-6 text-center cursor-pointer"
+                            className="bg-ghipss-blue/10 border border-ghipss-blue/30 rounded-xl p-6 text-center cursor-pointer"
                         >
                             <div className="text-zinc-400 mb-2">Year 1 Estimated Total</div>
                             <motion.div
@@ -637,7 +637,7 @@ export function ProposalContent() {
                         className="flex flex-col sm:flex-row gap-4 justify-center"
                     >
                         <motion.div variants={fadeInScale} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
-                            <Button size="lg" className="bg-[#FF0055] hover:bg-[#D90049] text-white rounded-full px-8 py-6 text-lg">
+                            <Button size="lg" className="bg-ghipss-blue hover:bg-[#002244] text-white rounded-full px-8 py-6 text-lg">
                                 Request Presentation / Demo
                             </Button>
                         </motion.div>
@@ -736,7 +736,7 @@ function ModuleCard({ icon, title, features }: { icon: React.ReactNode; title: s
             <SpotlightCard className="p-6 h-full">
                 <motion.div
                     whileHover={{ scale: 1.1, rotate: 5 }}
-                    className="w-12 h-12 bg-[#FF0055]/10 rounded-xl flex items-center justify-center text-[#FF0055] mb-4"
+                    className="w-12 h-12 bg-ghipss-blue/10 rounded-xl flex items-center justify-center text-ghipss-blue mb-4"
                 >
                     {icon}
                 </motion.div>
@@ -744,7 +744,7 @@ function ModuleCard({ icon, title, features }: { icon: React.ReactNode; title: s
                 <ul className="space-y-2">
                     {features.map((f, i) => (
                         <li key={i} className="text-sm text-zinc-400 flex gap-2">
-                            <span className="text-[#FF0055]">•</span>
+                            <span className="text-ghipss-blue">•</span>
                             <span>{f}</span>
                         </li>
                     ))}
@@ -760,12 +760,12 @@ function GateCard({ gate, phase, date, items, highlight = false }: { gate: strin
             variants={fadeInUp}
             whileHover={{ scale: 1.02, x: 8 }}
             transition={{ duration: 0.3 }}
-            className={cn("border rounded-xl p-6 cursor-pointer", highlight ? "bg-[#FF0055]/10 border-[#FF0055]/30" : "bg-zinc-900/30 border-zinc-800 hover:border-zinc-700")}
+            className={cn("border rounded-xl p-6 cursor-pointer", highlight ? "bg-ghipss-blue/10 border-ghipss-blue/30" : "bg-zinc-900/30 border-zinc-800 hover:border-zinc-700")}
         >
             <div className="flex flex-col md:flex-row md:items-center gap-4 mb-4">
                 <motion.div
                     whileHover={{ scale: 1.1 }}
-                    className={cn("px-3 py-1 rounded-full text-sm font-bold w-fit", highlight ? "bg-[#FF0055] text-white" : "bg-zinc-800 text-zinc-400")}
+                    className={cn("px-3 py-1 rounded-full text-sm font-bold w-fit", highlight ? "bg-ghipss-blue text-white" : "bg-zinc-800 text-zinc-400")}
                 >
                     {gate}
                 </motion.div>
@@ -777,7 +777,7 @@ function GateCard({ gate, phase, date, items, highlight = false }: { gate: strin
             <ul className="grid md:grid-cols-2 gap-2">
                 {items.map((item, i) => (
                     <li key={i} className="text-sm text-zinc-400 flex gap-2">
-                        <Check className={cn("w-4 h-4 shrink-0", highlight ? "text-[#FF0055]" : "text-zinc-600")} />
+                        <Check className={cn("w-4 h-4 shrink-0", highlight ? "text-ghipss-blue" : "text-zinc-600")} />
                         <span>{item}</span>
                     </li>
                 ))}

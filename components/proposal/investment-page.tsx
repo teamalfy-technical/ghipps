@@ -41,11 +41,11 @@ export function InvestmentPage() {
 
                     {/* Header */}
                     <div>
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF0055]/10 text-[#FF0055] text-[10px] font-bold tracking-wider uppercase border border-[#FF0055]/20 mb-4">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-ghipss-blue/10 text-ghipss-blue text-[10px] font-bold tracking-wider uppercase border border-ghipss-blue/20 mb-4">
                             Page 9 — Value
                         </div>
                         <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white mb-6">
-                            Invest in <br /><span className="text-[#FF0055]">Confidence.</span>
+                            Invest in <br /><span className="text-ghipss-blue">Confidence.</span>
                         </h2>
                         <p className="text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
                             This isn't a website. It's a <strong>public trust platform</strong>. A modern structure answers the question "Is this institution credible?" instantly—without explanation.
@@ -66,7 +66,7 @@ export function InvestmentPage() {
                                 { icon: SlidersHorizontal, title: "Control without complexity", desc: "Role-based publishing with clear governance." }
                             ].map((item, i) => (
                                 <motion.div variants={itemVariant} key={i} className="flex gap-4">
-                                    <div className="shrink-0 text-[#FF0055] mt-1">
+                                    <div className="shrink-0 text-ghipss-blue mt-1">
                                         <item.icon className="w-5 h-5" />
                                     </div>
                                     <div>
@@ -81,7 +81,7 @@ export function InvestmentPage() {
                     {/* Risk Reduction Lens */}
                     <div className="bg-zinc-50 dark:bg-zinc-900 rounded-2xl p-6 border border-zinc-100 dark:border-zinc-800">
                         <h3 className="text-lg font-bold text-zinc-900 dark:text-white mb-4 flex items-center gap-2">
-                            <ShieldCheck className="w-5 h-5 text-[#FF0055]" />
+                            <ShieldCheck className="w-5 h-5 text-ghipss-blue" />
                             The "Risk Reduction" Lens
                         </h3>
                         <div className="space-y-3">
@@ -114,7 +114,7 @@ export function InvestmentPage() {
                         {/* One-Time Build */}
                         <div className="md:col-span-2 space-y-4">
                             <h3 className="text-xl font-bold flex items-center gap-2">
-                                <RocketIcon className="w-5 h-5 text-[#FF0055]" />
+                                <RocketIcon className="w-5 h-5 text-ghipss-blue" />
                                 One-Time Build Investment
                             </h3>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -129,8 +129,8 @@ export function InvestmentPage() {
                                     <div className="text-xs text-zinc-400">CMS Setup, Migration, QA, Go-Live</div>
                                 </div>
                             </div>
-                            <div className="p-4 bg-[#FF0055]/10 border border-[#FF0055]/20 rounded-xl flex justify-between items-center">
-                                <span className="font-bold text-sm text-[#FF0055]">Total One-Time Build</span>
+                            <div className="p-4 bg-ghipss-blue/10 border border-ghipss-blue/20 rounded-xl flex justify-between items-center">
+                                <span className="font-bold text-sm text-ghipss-blue">Total One-Time Build</span>
                                 <span className="font-bold text-xl text-white">GHS 145,000</span>
                             </div>
                         </div>
@@ -138,7 +138,7 @@ export function InvestmentPage() {
                         {/* Recurring */}
                         <div className="md:col-span-2 space-y-4 pt-4 border-t border-white/10">
                             <h3 className="text-xl font-bold flex items-center gap-2">
-                                <TrendingUp className="w-5 h-5 text-[#FF0055]" />
+                                <TrendingUp className="w-5 h-5 text-ghipss-blue" />
                                 Recurring Operational Investment
                             </h3>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -185,10 +185,10 @@ export function InvestmentPage() {
                     {/* Navigation Hint */}
                     <div className="flex justify-end pt-4">
                         <div className="group cursor-pointer flex flex-col items-end">
-                            <span className="text-[10px] uppercase tracking-widest text-[#FF0055] mb-1 font-semibold">Next Up</span>
-                            <div className="flex items-center gap-2 text-white font-bold text-lg hover:underline decoration-[#FF0055] decoration-2 underline-offset-4 transition-all">
+                            <span className="text-[10px] uppercase tracking-widest text-ghipss-blue mb-1 font-semibold">Next Up</span>
+                            <div className="flex items-center gap-2 text-white font-bold text-lg hover:underline decoration-ghipss-blue decoration-2 underline-offset-4 transition-all">
                                 Why Ananseum?
-                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform text-[#FF0055]" />
+                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform text-ghipss-blue" />
                             </div>
                         </div>
                     </div>

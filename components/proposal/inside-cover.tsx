@@ -30,7 +30,7 @@ export function InsideCover() {
                 <motion.div variants={container} initial="hidden" animate="show" className="space-y-8">
                     {/* Header */}
                     <div>
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF0055]/10 text-[#FF0055] text-[10px] font-bold tracking-wider uppercase border border-[#FF0055]/20 mb-4">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-ghipss-blue/10 text-ghipss-blue text-[10px] font-bold tracking-wider uppercase border border-ghipss-blue/20 mb-4">
                             Page 1 — Inside Cover
                         </div>
                         <h2 className="text-3xl font-bold text-zinc-900 dark:text-white mb-2">Welcome{userName ? `, ${userName}` : ""}</h2>
@@ -41,7 +41,7 @@ export function InsideCover() {
 
                     {/* Executive Summary */}
                     <div className="space-y-4">
-                        <h3 className="text-lg font-bold text-zinc-900 dark:text-white border-l-4 border-[#FF0055] pl-3">Executive Summary</h3>
+                        <h3 className="text-lg font-bold text-zinc-900 dark:text-white border-l-4 border-ghipss-blue pl-3">Executive Summary</h3>
                         <div className="text-zinc-700 dark:text-zinc-300 text-sm leading-relaxed space-y-4">
                             <p>
                                 GhIPSS requires a website that matches the credibility and clarity of a national infrastructure institution—modern in experience, strong in storytelling, easy to navigate, and built with secure hosting and ongoing management.
@@ -80,7 +80,7 @@ export function InsideCover() {
                         <div className="grid grid-cols-1 gap-4">
                             <SpotlightCard className="p-5 bg-white dark:bg-zinc-900/40 border-zinc-200 dark:border-zinc-800 shadow-sm dark:shadow-none">
                                 <div className="flex gap-4">
-                                    <div className="shrink-0 text-[#FF0055]">
+                                    <div className="shrink-0 text-ghipss-blue">
                                         <Globe className="w-6 h-6" />
                                     </div>
                                     <div>
@@ -96,7 +96,7 @@ export function InsideCover() {
 
                             <SpotlightCard className="p-5 bg-white dark:bg-zinc-900/40 border-zinc-200 dark:border-zinc-800 shadow-sm dark:shadow-none">
                                 <div className="flex gap-4">
-                                    <div className="shrink-0 text-[#FF0055]">
+                                    <div className="shrink-0 text-ghipss-blue">
                                         <Database className="w-6 h-6" />
                                     </div>
                                     <div>
@@ -112,7 +112,7 @@ export function InsideCover() {
 
                             <SpotlightCard className="p-5 bg-white dark:bg-zinc-900/40 border-zinc-200 dark:border-zinc-800 shadow-sm dark:shadow-none">
                                 <div className="flex gap-4">
-                                    <div className="shrink-0 text-[#FF0055]">
+                                    <div className="shrink-0 text-ghipss-blue">
                                         <Shield className="w-6 h-6" />
                                     </div>
                                     <div>
@@ -147,8 +147,8 @@ export function InsideCover() {
                             <div className="text-zinc-500 dark:text-zinc-500 text-sm mb-3">Lead Developer, Ananseum</div>
 
                             <div className="flex flex-col sm:flex-row gap-4 text-sm text-zinc-500 dark:text-zinc-400">
-                                <span className="flex items-center justify-center sm:justify-start gap-2 hover:text-[#FF0055] transition-colors"><Mail className="w-3 h-3" /> alfred@ananseum.com</span>
-                                <span className="flex items-center justify-center sm:justify-start gap-2 hover:text-[#FF0055] transition-colors"><Phone className="w-3 h-3" /> +233 0557447933</span>
+                                <span className="flex items-center justify-center sm:justify-start gap-2 hover:text-ghipss-blue transition-colors"><Mail className="w-3 h-3" /> alfred@ananseum.com</span>
+                                <span className="flex items-center justify-center sm:justify-start gap-2 hover:text-ghipss-blue transition-colors"><Phone className="w-3 h-3" /> +233 0557447933</span>
                             </div>
                         </div>
                     </div>

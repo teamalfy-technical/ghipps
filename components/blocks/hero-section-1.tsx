@@ -83,7 +83,7 @@ export function HeroSection() {
                                     <Link
                                         href="#link"
                                         className="hover:bg-background dark:hover:border-t-border bg-muted group mx-auto flex w-fit items-center gap-4 rounded-full border p-1 pl-4 shadow-md shadow-black/5 transition-all duration-300 dark:border-t-white/5 dark:shadow-zinc-950">
-                                        <span className="text-foreground text-sm uppercase tracking-wider font-medium">Website Design Proposal <span className="text-zinc-500 mx-2">|</span> By Alfred Opare Saforo <span className="text-zinc-500 mx-2">|</span> Feb 2026 <span className="text-[#FF0055] mx-2">|</span> Confidential</span>
+                                        <span className="text-foreground text-sm uppercase tracking-wider font-medium">Website Design Proposal <span className="text-zinc-500 mx-2">|</span> By Alfred Opare Saforo <span className="text-zinc-500 mx-2">|</span> Feb 2026 <span className="text-ghipss-blue mx-2">|</span> Confidential</span>
                                         <span className="dark:border-background block h-4 w-0.5 border-l bg-white dark:bg-zinc-700"></span>
 
                                         <div className="bg-background group-hover:bg-muted size-6 overflow-hidden rounded-full duration-500">
@@ -123,17 +123,17 @@ export function HeroSection() {
                                     }}
                                     className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
                                     <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-4 text-left">
-                                        <div className="text-[#FF0055] text-sm font-semibold mb-1">✓ Scorable</div>
+                                        <div className="text-ghipss-blue text-sm font-semibold mb-1">✓ Scorable</div>
                                         <div className="text-white font-medium">International-Standard UX</div>
                                         <div className="text-zinc-400 text-sm">VISA / Vocalink / Mastercard benchmarked</div>
                                     </div>
                                     <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-4 text-left">
-                                        <div className="text-[#FF0055] text-sm font-semibold mb-1">✓ Scorable</div>
+                                        <div className="text-ghipss-blue text-sm font-semibold mb-1">✓ Scorable</div>
                                         <div className="text-white font-medium">Knowledge Hub + Media Centre</div>
                                         <div className="text-zinc-400 text-sm">Structured, searchable, scalable content</div>
                                     </div>
                                     <div className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-4 text-left">
-                                        <div className="text-[#FF0055] text-sm font-semibold mb-1">✓ Scorable</div>
+                                        <div className="text-ghipss-blue text-sm font-semibold mb-1">✓ Scorable</div>
                                         <div className="text-white font-medium">Secure Hosting + Maintenance</div>
                                         <div className="text-zinc-400 text-sm">SSL + monitoring + support under one contract</div>
                                     </div>
@@ -157,7 +157,7 @@ export function HeroSection() {
                                         <Button
                                             asChild
                                             size="lg"
-                                            className="rounded-xl px-6 text-base bg-[#FF0055] hover:bg-[#D90049] text-white">
+                                            className="rounded-xl px-6 text-base bg-ghipss-blue hover:bg-[#002244] text-white">
                                             <Link href="#contact">
                                                 <span className="text-nowrap">Request Presentation / Demo</span>
                                             </Link>

@@ -74,11 +74,11 @@ export function ObjectivesPage() {
 
                     {/* Header */}
                     <div>
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF0055]/10 text-[#FF0055] text-[10px] font-bold tracking-wider uppercase border border-[#FF0055]/20 mb-4">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-ghipss-blue/10 text-ghipss-blue text-[10px] font-bold tracking-wider uppercase border border-ghipss-blue/20 mb-4">
                             Page 2 — Strategy
                         </div>
                         <h2 className="text-4xl md:text-5xl font-bold text-zinc-900 dark:text-white mb-6 tracking-tight">
-                            Objectives <span className="text-[#FF0055]">.</span>
+                            Objectives <span className="text-ghipss-blue">.</span>
                         </h2>
                         <p className="text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed font-light">
                             We are building a platform that balances <span className="text-zinc-900 dark:text-white font-medium">national authority</span> with <span className="text-zinc-900 dark:text-white font-medium">modern digital agility</span>.
@@ -101,7 +101,7 @@ export function ObjectivesPage() {
                                         <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed mb-2">
                                             {obj.desc}
                                         </p>
-                                        <div className="flex items-center gap-2 text-xs font-medium text-[#FF0055]">
+                                        <div className="flex items-center gap-2 text-xs font-medium text-ghipss-blue">
                                             <Check className="w-3 h-3" />
                                             {obj.sub}
                                         </div>
@@ -120,7 +120,7 @@ export function ObjectivesPage() {
                     {/* Success Criteria Section */}
                     <div>
                         <h3 className="text-xl font-bold text-zinc-900 dark:text-white mb-8 flex items-center gap-3">
-                            <Target className="w-6 h-6 text-[#FF0055]" />
+                            <Target className="w-6 h-6 text-ghipss-blue" />
                             Defining Success
                         </h3>
 
@@ -151,7 +151,7 @@ export function ObjectivesPage() {
                                 }
                             ].map((criterion, i) => (
                                 <motion.div variants={itemVariant} key={i} className="relative flex gap-6 group">
-                                    <div className="shrink-0 w-10 h-10 rounded-full bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 flex items-center justify-center text-zinc-500 group-hover:text-[#FF0055] group-hover:border-[#FF0055]/30 transition-all z-10 shadow-sm">
+                                    <div className="shrink-0 w-10 h-10 rounded-full bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 flex items-center justify-center text-zinc-500 group-hover:text-ghipss-blue group-hover:border-ghipss-blue/30 transition-all z-10 shadow-sm">
                                         <criterion.icon className="w-5 h-5" strokeWidth={1.5} />
                                     </div>
                                     <div className="pt-1">
@@ -174,10 +174,10 @@ export function ObjectivesPage() {
 
                     {/* Deliverables Snapshot - Dark Card */}
                     <motion.div variants={itemVariant} className="bg-zinc-900 dark:bg-zinc-950 rounded-2xl p-8 text-white shadow-xl border border-zinc-800 relative overflow-hidden group">
-                        <div className="absolute top-0 right-0 p-32 bg-[#FF0055] blur-[100px] opacity-10 group-hover:opacity-20 transition-opacity duration-1000" />
+                        <div className="absolute top-0 right-0 p-32 bg-ghipss-blue blur-[100px] opacity-10 group-hover:opacity-20 transition-opacity duration-1000" />
 
                         <h3 className="text-lg font-bold mb-6 flex items-center gap-3 relative z-10">
-                            <Package className="w-5 h-5 text-[#FF0055]" />
+                            <Package className="w-5 h-5 text-ghipss-blue" />
                             Deliverables Snapshot
                         </h3>
 
@@ -191,7 +191,7 @@ export function ObjectivesPage() {
                                 "Training & Support"
                             ].map((item, i) => (
                                 <div key={i} className="flex items-center gap-3 text-sm text-zinc-400">
-                                    <div className="w-1.5 h-1.5 rounded-sm bg-[#FF0055]" />
+                                    <div className="w-1.5 h-1.5 rounded-sm bg-ghipss-blue" />
                                     {item}
                                 </div>
                             ))}
@@ -201,10 +201,10 @@ export function ObjectivesPage() {
                     {/* Navigation Hint */}
                     <div className="flex justify-end pt-4">
                         <div className="group cursor-pointer flex flex-col items-end">
-                            <span className="text-[10px] uppercase tracking-widest text-[#FF0055] mb-1 font-semibold">Next Up</span>
-                            <div className="flex items-center gap-2 text-zinc-900 dark:text-white font-bold text-lg hover:underline decoration-[#FF0055] decoration-2 underline-offset-4 transition-all">
+                            <span className="text-[10px] uppercase tracking-widest text-ghipss-blue mb-1 font-semibold">Next Up</span>
+                            <div className="flex items-center gap-2 text-zinc-900 dark:text-white font-bold text-lg hover:underline decoration-ghipss-blue decoration-2 underline-offset-4 transition-all">
                                 Proposed Site Structure
-                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform text-[#FF0055]" />
+                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform text-ghipss-blue" />
                             </div>
                         </div>
                     </div>

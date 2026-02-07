@@ -11,6 +11,8 @@ const config: Config = {
             colors: {
                 background: "var(--background)",
                 foreground: "var(--foreground)",
+                "ghipss-blue": "#003366",
+                "ghipss-grey": "#707070",
             },
             animation: {
                 marquee: "marquee var(--duration) linear infinite",

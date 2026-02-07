@@ -6,6 +6,7 @@ import { ChevronLeft, ChevronRight, Printer } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
+import Image from "next/image";
 
 // Context for book navigation and state
 interface BookContextType {
@@ -18,6 +19,8 @@ interface BookContextType {
     unlock: () => void;
     userName: string;
     setUserName: (name: string) => void;
+    sessionId: string;
+    setSessionId: (id: string) => void;
 }
 
 const BookContext = createContext<BookContextType | undefined>(undefined);
@@ -40,6 +43,7 @@ export function BookLayout({ children, className }: BookLayoutProps) {
     const [currentPage, setCurrentPage] = useState(0);
     const [isUnlocked, setIsUnlocked] = useState(false);
     const [userName, setUserName] = useState("");
+    const [sessionId, setSessionId] = useState("");
 
     // Check if children is valid array to prevent errors
     const pages = React.Children.toArray(children);
@@ -112,6 +116,49 @@ export function BookLayout({ children, className }: BookLayoutProps) {
         }
     }, [isUnlocked, currentPage]);
 
+    // Page view tracking
+    const pageViewRef = useRef<{ viewId: string; startTime: number } | null>(null);
+
+    useEffect(() => {
+        if (!sessionId || currentPage === 0) return;
+
+        const trackPageView = async () => {
+            try {
+                // Log exit for previous page
+                if (pageViewRef.current) {
+                    const { logPageExit } = await import("@/lib/analytics");
+                    const { Timestamp } = await import("firebase/firestore");
+                    const startTimestamp = Timestamp.fromMillis(pageViewRef.current.startTime);
+                    await logPageExit(pageViewRef.current.viewId, startTimestamp);
+                }
+
+                // Log entry for new page
+                const { logPageView, updateSessionActivity } = await import("@/lib/analytics");
+                const viewId = await logPageView(sessionId, currentPage);
+                pageViewRef.current = { viewId, startTime: Date.now() };
+
+                // Update session activity
+                await updateSessionActivity(sessionId);
+            } catch (error) {
+                console.error("Page tracking failed:", error);
+            }
+        };
+
+        trackPageView();
+
+        // Cleanup on unmount or page change
+        return () => {
+            if (pageViewRef.current) {
+                const { viewId, startTime } = pageViewRef.current;
+                import("@/lib/analytics").then(async ({ logPageExit }) => {
+                    const { Timestamp } = await import("firebase/firestore");
+                    const startTimestamp = Timestamp.fromMillis(startTime);
+                    await logPageExit(viewId, startTimestamp);
+                }).catch(console.error);
+            }
+        };
+    }, [sessionId, currentPage]);
+
     return (
         <BookContext.Provider
             value={{
@@ -124,6 +171,8 @@ export function BookLayout({ children, className }: BookLayoutProps) {
                 unlock,
                 userName,
                 setUserName,
+                sessionId,
+                setSessionId,
             }}
         >
             <div className={cn(
@@ -139,7 +188,7 @@ export function BookLayout({ children, className }: BookLayoutProps) {
                             variant="ghost"
                             size="sm"
                             onClick={() => setIsPrintView(true)}
-                            className="rounded-full bg-white/50 dark:bg-black/50 backdrop-blur border border-zinc-200 dark:border-zinc-800 hover:bg-[#FF0055] hover:text-white transition-colors gap-2"
+                            className="rounded-full bg-white/50 dark:bg-black/50 backdrop-blur border border-zinc-200 dark:border-zinc-800 hover:bg-ghipss-blue hover:text-white transition-colors gap-2"
                             title="Download PDF"
                             disabled={isPrintView}
                         >
@@ -156,7 +205,7 @@ export function BookLayout({ children, className }: BookLayoutProps) {
                 <div
                     ref={contentRef}
                     className={cn(
-                        "flex-1 relative overflow-y-auto overflow-x-hidden scroll-smooth",
+                        "flex-1 relative overflow-y-auto overflow-x-hidden scroll-smooth pb-20 md:pb-0", // Mobile: add space for fixed nav
                         isPrintView && "overflow-visible h-auto bg-white" // Force white bg for capture
                     )}
                 >
@@ -197,7 +246,7 @@ export function BookLayout({ children, className }: BookLayoutProps) {
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="shrink-0 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md border-t border-zinc-200 dark:border-zinc-900 p-4 z-50 w-full print:hidden"
+                        className="fixed bottom-0 left-0 right-0 md:relative md:inset-auto shrink-0 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md border-t border-zinc-200 dark:border-zinc-900 p-4 z-50 w-full print:hidden"
                     >
                         <div className="max-w-5xl mx-auto flex items-center justify-between">
                             <div className="flex items-center gap-4">
@@ -211,8 +260,18 @@ export function BookLayout({ children, className }: BookLayoutProps) {
                                     <ChevronLeft className="w-4 h-4 mr-2" />
                                     Previous
                                 </Button>
-                                <div className="text-zinc-500 dark:text-zinc-500 text-sm font-mono hidden sm:block">
-                                    Page {currentPage} of {totalPages - 1}
+                                <div className="flex flex-col items-center gap-1">
+                                    <div className="relative h-6 w-20 opacity-80 mix-blend-multiply dark:mix-blend-normal">
+                                        <Image
+                                            src="/images/logo-ghipss.jpg"
+                                            alt="GhIPSS"
+                                            fill
+                                            className="object-contain dark:brightness-200"
+                                        />
+                                    </div>
+                                    <div className="text-zinc-500 dark:text-zinc-500 text-xs font-mono hidden sm:block">
+                                        Page {currentPage} of {totalPages - 1}
+                                    </div>
                                 </div>
                             </div>
 
@@ -226,7 +285,7 @@ export function BookLayout({ children, className }: BookLayoutProps) {
                                     size="sm"
                                     onClick={nextPage}
                                     disabled={currentPage >= totalPages - 1}
-                                    className="bg-[#FF0055] hover:bg-[#D90049] text-white"
+                                    className="bg-ghipss-blue hover:bg-[#002244] text-white"
                                 >
                                     Next
                                     <ChevronRight className="w-4 h-4 ml-2" />

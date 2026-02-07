@@ -88,11 +88,11 @@ export function FinalPage() {
 
                     {/* Header */}
                     <div>
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF0055]/10 text-[#FF0055] text-[10px] font-bold tracking-wider uppercase border border-[#FF0055]/20 mb-4">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-ghipss-blue/10 text-ghipss-blue text-[10px] font-bold tracking-wider uppercase border border-ghipss-blue/20 mb-4">
                             Page 11 — Decision
                         </div>
                         <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white mb-6">
-                            Built for <br /><span className="text-[#FF0055]">National Trust.</span>
+                            Built for <br /><span className="text-ghipss-blue">National Trust.</span>
                         </h2>
                         <p className="text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed font-light">
                             Thank you. This proposal is designed around one outcome: A website that feels like national infrastructure—credible, clear, secure, and always-on.
@@ -102,7 +102,7 @@ export function FinalPage() {
                     {/* The Commitment */}
                     <motion.div variants={itemVariant} className="space-y-6">
                         <h3 className="text-lg font-bold text-zinc-900 dark:text-white flex items-center gap-2">
-                            <ShieldCheck className="w-5 h-5 text-[#FF0055]" />
+                            <ShieldCheck className="w-5 h-5 text-ghipss-blue" />
                             Our Commitment
                         </h3>
 
@@ -115,7 +115,7 @@ export function FinalPage() {
                                 { icon: CheckCircle2, text: "Full handover so GhIPSS owns the platform." }
                             ].map((item, i) => (
                                 <div key={i} className="flex gap-4 p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800">
-                                    <div className="shrink-0 text-[#FF0055] mt-0.5">
+                                    <div className="shrink-0 text-ghipss-blue mt-0.5">
                                         <item.icon className="w-5 h-5" />
                                     </div>
                                     <p className="text-sm text-zinc-600 dark:text-zinc-300 font-medium">{item.text}</p>
@@ -131,8 +131,8 @@ export function FinalPage() {
                             <div className="font-bold text-zinc-900 dark:text-white text-lg">Alfred Opare Saforo</div>
                             <div>Lead Developer, Ananseum</div>
                             <div className="flex gap-4 mt-2">
-                                <span className="flex items-center gap-2 hover:text-[#FF0055] transition-colors cursor-pointer"><Mail className="w-4 h-4" /> hello@ananseum.com</span>
-                                <span className="flex items-center gap-2 hover:text-[#FF0055] transition-colors cursor-pointer"><Phone className="w-4 h-4" /> +233 50 000 0000</span>
+                                <span className="flex items-center gap-2 hover:text-ghipss-blue transition-colors cursor-pointer"><Mail className="w-4 h-4" /> alfred@ananseum.com</span>
+                                <span className="flex items-center gap-2 hover:text-ghipss-blue transition-colors cursor-pointer"><Phone className="w-4 h-4" /> 0557447933</span>
                             </div>
                         </div>
                     </motion.div>
@@ -149,7 +149,7 @@ export function FinalPage() {
                     {/* Next Steps */}
                     <div className="space-y-6">
                         <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
-                            <Rocket className="w-5 h-5 text-[#FF0055]" />
+                            <Rocket className="w-5 h-5 text-ghipss-blue" />
                             Next Steps
                         </h3>
 
@@ -157,7 +157,7 @@ export function FinalPage() {
                             <div className="absolute left-[11px] top-2 bottom-2 w-0.5 bg-zinc-800" />
 
                             <div className="relative pl-8">
-                                <div className="absolute left-0 top-1 w-6 h-6 rounded-full bg-zinc-800 border-2 border-[#FF0055] text-[10px] font-bold flex items-center justify-center">1</div>
+                                <div className="absolute left-0 top-1 w-6 h-6 rounded-full bg-zinc-800 border-2 border-ghipss-blue text-[10px] font-bold flex items-center justify-center">1</div>
                                 <h4 className="font-bold text-white text-lg mb-1">Confirmation</h4>
                                 <p className="text-sm text-zinc-400">Confirm intent & nominate Project Owner.</p>
                             </div>
@@ -198,7 +198,7 @@ export function FinalPage() {
                     {/* Acceptance / Sign-off */}
                     <div className="space-y-8 pt-4">
                         <h3 className="text-lg font-bold text-white flex items-center gap-2">
-                            <PenTool className="w-5 h-5 text-[#FF0055]" />
+                            <PenTool className="w-5 h-5 text-ghipss-blue" />
                             Acceptance
                         </h3>
 
@@ -216,7 +216,7 @@ export function FinalPage() {
                                                 value={formState.name}
                                                 onChange={(e) => setFormState({ ...formState, name: e.target.value })}
                                                 placeholder="e.g. Update Akuffo"
-                                                className="bg-white/5 border-white/10 text-white placeholder:text-zinc-600 focus:border-[#FF0055] focus:ring-[#FF0055]"
+                                                className="bg-white/5 border-white/10 text-white placeholder:text-zinc-600 focus:border-ghipss-blue focus:ring-ghipss-blue"
                                                 required
                                             />
                                         </div>
@@ -228,7 +228,7 @@ export function FinalPage() {
                                                 value={formState.email}
                                                 onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                                                 placeholder="e.g. u.akuffo@ghipss.net"
-                                                className="bg-white/5 border-white/10 text-white placeholder:text-zinc-600 focus:border-[#FF0055] focus:ring-[#FF0055]"
+                                                className="bg-white/5 border-white/10 text-white placeholder:text-zinc-600 focus:border-ghipss-blue focus:ring-ghipss-blue"
                                                 required
                                             />
                                         </div>
@@ -239,7 +239,7 @@ export function FinalPage() {
                                                 value={formState.position}
                                                 onChange={(e) => setFormState({ ...formState, position: e.target.value })}
                                                 placeholder="e.g. Head of Technology"
-                                                className="bg-white/5 border-white/10 text-white placeholder:text-zinc-600 focus:border-[#FF0055] focus:ring-[#FF0055]"
+                                                className="bg-white/5 border-white/10 text-white placeholder:text-zinc-600 focus:border-ghipss-blue focus:ring-ghipss-blue"
                                                 required
                                             />
                                         </div>
@@ -247,7 +247,7 @@ export function FinalPage() {
                                         <Button
                                             type="submit"
                                             disabled={isSubmitting}
-                                            className="w-full bg-[#FF0055] hover:bg-[#d90049] text-white font-bold"
+                                            className="w-full bg-ghipss-blue hover:bg-[#002244] text-white font-bold"
                                         >
                                             {isSubmitting ? "Signing..." : "Sign & Accept Proposal"}
                                         </Button>
@@ -280,7 +280,7 @@ export function FinalPage() {
                                         <div className="text-sm text-white font-medium">Alfred Opare Saforo</div>
                                     </div>
                                     <div className="border-b border-zinc-800 pb-1">
-                                        <div className="text-xs text-[#FF0055] mb-4 font-script text-lg">Signed Digitally</div>
+                                        <div className="text-xs text-ghipss-blue mb-4 font-script text-lg">Signed Digitally</div>
                                     </div>
                                     <div className="border-b border-zinc-800 pb-1">
                                         <div className="text-xs text-zinc-500 mb-4">{new Date().toLocaleDateString()}</div>

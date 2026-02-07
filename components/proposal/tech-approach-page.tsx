@@ -42,11 +42,11 @@ export function TechApproachPage() {
 
                     {/* Header */}
                     <div>
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF0055]/10 text-[#FF0055] text-[10px] font-bold tracking-wider uppercase border border-[#FF0055]/20 mb-4">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-ghipss-blue/10 text-ghipss-blue text-[10px] font-bold tracking-wider uppercase border border-ghipss-blue/20 mb-4">
                             Page 5 — Technical Approach
                         </div>
                         <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white mb-6">
-                            Critical <span className="text-[#FF0055]">Infrastructure.</span>
+                            Critical <span className="text-ghipss-blue">Infrastructure.</span>
                         </h2>
                         <p className="text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed font-light">
                             Secure by default, fast under load, and built to scale. We treat your website like the financial critical infrastructure it represents.
@@ -56,7 +56,7 @@ export function TechApproachPage() {
                     {/* Architecture Section */}
                     <motion.div variants={itemVariant} className="space-y-6">
                         <h3 className="text-lg font-bold text-zinc-900 dark:text-white flex items-center gap-2">
-                            <Server className="w-5 h-5 text-[#FF0055]" />
+                            <Server className="w-5 h-5 text-ghipss-blue" />
                             Architecture: Component-Driven CMS
                         </h3>
 
@@ -98,14 +98,14 @@ export function TechApproachPage() {
                             <span className="text-zinc-300">→</span>
                             <span className="px-2 py-1 rounded bg-zinc-100 dark:bg-zinc-900">STAGING (UAT)</span>
                             <span className="text-zinc-300">→</span>
-                            <span className="px-2 py-1 rounded bg-[#FF0055]/10 text-[#FF0055] font-bold">PRODUCTION</span>
+                            <span className="px-2 py-1 rounded bg-ghipss-blue/10 text-ghipss-blue font-bold">PRODUCTION</span>
                         </div>
                     </motion.div>
 
                     {/* Governance */}
                     <motion.div variants={itemVariant} className="space-y-4">
                         <h3 className="text-lg font-bold text-zinc-900 dark:text-white flex items-center gap-2">
-                            <Users className="w-5 h-5 text-[#FF0055]" />
+                            <Users className="w-5 h-5 text-ghipss-blue" />
                             governance & Workflow
                         </h3>
                         <div className="flex flex-wrap gap-2">
@@ -133,7 +133,7 @@ export function TechApproachPage() {
                     {/* Security Section */}
                     <div className="space-y-6">
                         <h3 className="text-xl font-bold flex items-center gap-3 text-white">
-                            <ShieldCheck className="w-6 h-6 text-[#FF0055]" />
+                            <ShieldCheck className="w-6 h-6 text-ghipss-blue" />
                             Security & Risk Controls
                         </h3>
 
@@ -149,9 +149,9 @@ export function TechApproachPage() {
                             <div className="space-y-3">
                                 <h4 className="text-sm font-bold text-zinc-400 uppercase tracking-wider">Threat Protection</h4>
                                 <ul className="space-y-2 text-sm text-zinc-300">
-                                    <li className="flex gap-2"><Lock className="w-4 h-4 text-[#FF0055]" /> WAF & DDoS Mitigation</li>
-                                    <li className="flex gap-2"><Lock className="w-4 h-4 text-[#FF0055]" /> Vulnerability Scanning</li>
-                                    <li className="flex gap-2"><Lock className="w-4 h-4 text-[#FF0055]" /> Auto-Patching Schedule</li>
+                                    <li className="flex gap-2"><Lock className="w-4 h-4 text-ghipss-blue" /> WAF & DDoS Mitigation</li>
+                                    <li className="flex gap-2"><Lock className="w-4 h-4 text-ghipss-blue" /> Vulnerability Scanning</li>
+                                    <li className="flex gap-2"><Lock className="w-4 h-4 text-ghipss-blue" /> Auto-Patching Schedule</li>
                                 </ul>
                             </div>
                         </div>
@@ -160,7 +160,7 @@ export function TechApproachPage() {
                     {/* Performance & Resilience */}
                     <div className="space-y-6">
                         <h3 className="text-xl font-bold flex items-center gap-3 text-white">
-                            <Zap className="w-6 h-6 text-[#FF0055]" />
+                            <Zap className="w-6 h-6 text-ghipss-blue" />
                             Performance & Reliability
                         </h3>
 
@@ -186,7 +186,7 @@ export function TechApproachPage() {
                     <div className="space-y-8">
                         <div>
                             <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
-                                <Activity className="w-5 h-5 text-[#FF0055]" />
+                                <Activity className="w-5 h-5 text-ghipss-blue" />
                                 Compliance
                             </h3>
                             <div className="flex flex-wrap gap-3">
@@ -198,9 +198,9 @@ export function TechApproachPage() {
                             </div>
                         </div>
 
-                        <div className="p-6 rounded-2xl bg-gradient-to-br from-[#FF0055]/20 to-transparent border border-[#FF0055]/30">
+                        <div className="p-6 rounded-2xl bg-gradient-to-br from-ghipss-blue/20 to-transparent border border-ghipss-blue/30">
                             <h3 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
-                                <Box className="w-5 h-5 text-[#FF0055]" />
+                                <Box className="w-5 h-5 text-ghipss-blue" />
                                 Ownership & Handover (No Black Box)
                             </h3>
                             <p className="text-sm text-zinc-300 mb-4">

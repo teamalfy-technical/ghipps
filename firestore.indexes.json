@@ -1,0 +1,39 @@
+{
+    "indexes": [
+        {
+            "collectionGroup": "page_views",
+            "queryScope": "COLLECTION",
+            "fields": [
+                {
+                    "fieldPath": "sessionId",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "startTime",
+                    "order": "ASCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "sessions",
+            "queryScope": "COLLECTION",
+            "fields": [
+                {
+                    "fieldPath": "startTime",
+                    "order": "DESCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "whitelist",
+            "queryScope": "COLLECTION",
+            "fields": [
+                {
+                    "fieldPath": "addedAt",
+                    "order": "DESCENDING"
+                }
+            ]
+        }
+    ],
+    "fieldOverrides": []
+}

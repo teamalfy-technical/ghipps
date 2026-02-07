@@ -47,7 +47,7 @@ export function BrandShowcase() {
 
                     {/* Agency Logo */}
                     <div className="group relative">
-                        <div className="absolute -inset-4 bg-gradient-to-r from-[#FF0055]/20 to-purple-500/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                        <div className="absolute -inset-4 bg-gradient-to-r from-ghipss-blue/20 to-purple-500/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                         <div className="relative bg-white/5 border border-white/10 p-6 rounded-xl backdrop-blur-sm w-64 h-32 flex items-center justify-center">
                             {/* Placeholder for Ananseum Logo */}
                             <img
@@ -59,7 +59,7 @@ export function BrandShowcase() {
                                     e.currentTarget.nextElementSibling?.classList.remove('hidden');
                                 }}
                             />
-                            <span className="hidden text-xl font-bold text-white tracking-tighter">Ananseum<span className="text-[#FF0055]">.</span></span>
+                            <span className="hidden text-xl font-bold text-white tracking-tighter">Ananseum<span className="text-ghipss-blue">.</span></span>
                         </div>
                     </div>
                 </motion.div>

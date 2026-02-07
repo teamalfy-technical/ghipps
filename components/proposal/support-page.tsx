@@ -41,11 +41,11 @@ export function SupportPage() {
 
                     {/* Header */}
                     <div>
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF0055]/10 text-[#FF0055] text-[10px] font-bold tracking-wider uppercase border border-[#FF0055]/20 mb-4">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-ghipss-blue/10 text-ghipss-blue text-[10px] font-bold tracking-wider uppercase border border-ghipss-blue/20 mb-4">
                             Page 8 — Operations
                         </div>
                         <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white mb-6">
-                            Support & <br /><span className="text-[#FF0055]">Maintenance.</span>
+                            Support & <br /><span className="text-ghipss-blue">Maintenance.</span>
                         </h2>
                         <p className="text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed font-light">
                             A corporate website isn’t "done" at launch. We provide consistent care to ensure it remains secure, fast, and trustworthy.
@@ -55,7 +55,7 @@ export function SupportPage() {
                     {/* 1. Monthly Support */}
                     <motion.div variants={itemVariant} className="space-y-6">
                         <h3 className="text-lg font-bold text-zinc-900 dark:text-white flex items-center gap-2">
-                            <LifeBuoy className="w-5 h-5 text-[#FF0055]" />
+                            <LifeBuoy className="w-5 h-5 text-ghipss-blue" />
                             Ongoing Support (Monthly)
                         </h3>
 
@@ -98,7 +98,7 @@ export function SupportPage() {
                     {/* 2. Hosting & Security */}
                     <motion.div variants={itemVariant} className="space-y-4">
                         <h3 className="text-lg font-bold text-zinc-900 dark:text-white flex items-center gap-2">
-                            <Server className="w-5 h-5 text-[#FF0055]" />
+                            <Server className="w-5 h-5 text-ghipss-blue" />
                             Hosting & Security (Annual)
                         </h3>
                         <div className="bg-gradient-to-br from-zinc-50 to-white dark:from-zinc-900 dark:to-zinc-900/50 p-6 rounded-xl border border-zinc-200 dark:border-zinc-800">
@@ -135,7 +135,7 @@ export function SupportPage() {
                     {/* 3. Service Levels (SLA) */}
                     <div>
                         <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
-                            <Activity className="w-5 h-5 text-[#FF0055]" />
+                            <Activity className="w-5 h-5 text-ghipss-blue" />
                             Service Level Targets
                         </h3>
 
@@ -164,8 +164,8 @@ export function SupportPage() {
 
                     {/* 4. Reporting & Visibility */}
                     <div className="grid grid-cols-2 gap-4">
-                        <div className="p-5 rounded-xl bg-[#FF0055]/10 border border-[#FF0055]/20">
-                            <FileText className="w-6 h-6 text-[#FF0055] mb-3" />
+                        <div className="p-5 rounded-xl bg-ghipss-blue/10 border border-ghipss-blue/20">
+                            <FileText className="w-6 h-6 text-ghipss-blue mb-3" />
                             <h4 className="font-bold text-white text-sm">Monthly Report</h4>
                             <p className="text-xs text-zinc-300 mt-1">Uptime, incidents, security notes & recommendations.</p>
                         </div>
@@ -190,10 +190,10 @@ export function SupportPage() {
                     {/* Navigation Hint */}
                     <div className="flex justify-end pt-4">
                         <div className="group cursor-pointer flex flex-col items-end">
-                            <span className="text-[10px] uppercase tracking-widest text-[#FF0055] mb-1 font-semibold">Next Up</span>
-                            <div className="flex items-center gap-2 text-white font-bold text-lg hover:underline decoration-[#FF0055] decoration-2 underline-offset-4 transition-all">
+                            <span className="text-[10px] uppercase tracking-widest text-ghipss-blue mb-1 font-semibold">Next Up</span>
+                            <div className="flex items-center gap-2 text-white font-bold text-lg hover:underline decoration-ghipss-blue decoration-2 underline-offset-4 transition-all">
                                 Investment Summary
-                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform text-[#FF0055]" />
+                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform text-ghipss-blue" />
                             </div>
                         </div>
                     </div>
