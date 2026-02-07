@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal: GhIPSS Website Redevelopment | Ananseum</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="assets/logo-dark.jpg" alt="Ananseum Logo">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#understanding">Objectives</a></li>
+                    <li><a href="#demos">Prototypes</a></li>
+                    <li><a href="#tech">Technology</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                </ul>
+            </nav>
+            <div class="nav-cta">
+                <a href="#contact" class="btn btn-primary">Book a Demo</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="grid-2">
+                    <div class="hero-content">
+                        <h1 class="hero-title">The Digital Pulse of Ghana's Financial Ecosystem.</h1>
+                        <p class="hero-subtitle">Secure. Scalable. World-Class. A proposal to transform the GhIPSS
+                            digital presence into a beacon of fintech innovation.</p>
+
+                        <div class="hero-actions">
+                            <button class="btn btn-primary">Download Technical Proposal</button>
+                            <button class="btn btn-outline">Client Case Studies</button>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <!-- Abstract UI Visual using CSS -->
+                        <div class="card" style="transform: rotate(-3deg); margin-top: 2rem;">
+                            <h3>GhIPSS Analytics</h3>
+                            <div
+                                style="height: 10px; background: #333; margin-top: 1rem; border-radius: 5px; width: 80%;">
+                            </div>
+                            <div
+                                style="height: 10px; background: #333; margin-top: 0.5rem; border-radius: 5px; width: 60%;">
+                            </div>
+                            <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                                <div style="flex:1; height: 100px; background: #222; border-radius: 8px;"></div>
+                                <div style="flex:1; height: 100px; background: #222; border-radius: 8px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Understanding -->
+        <section id="understanding" class="section">
+            <div class="container">
+                <h2 class="section-title">Understanding The Mandate</h2>
+                <div class="grid-3">
+                    <div class="card">
+                        <div class="card-icon">🏛️</div>
+                        <h4>National Trust</h4>
+                        <p>The new platform must radiate authority and security, comparable to Vocalink or Mastercard,
+                            reinforcing GhIPSS as the anchor of payment systems.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">📚</div>
+                        <h4>Knowledge Repository</h4>
+                        <p>Moving beyond a brochure to a functional hub for Banks and FinTechs to access Circulars, API
+                            Docs, and compliance reports instantly.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🚀</div>
+                        <h4>Future Ready</h4>
+                        <p>An architecture built on Jamstack to handle traffic spikes, ensure 99.9% uptime, and
+                            integrate seamlessly with future initiatives like GhQS.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Demos -->
+        <section id="demos" class="section bg-offset">
+            <div class="container">
+                <h2 class="section-title">Interactive Prototypes</h2>
+                <div class="grid-2">
+                    <!-- Knowledge Hub -->
+                    <div>
+                        <h3>The Smart Knowledge Hub</h3>
+                        <p>A centralized, searchable repository for all regulatory documentation.</p>
+                        <div class="mock-ui">
+                            <div class="filters">
+                                <button class="filter-chip active" data-filter="all">All</button>
+                                <button class="filter-chip" data-filter="circular">Circulars</button>
+                                <button class="filter-chip" data-filter="report">Reports</button>
+                            </div>
+                            <div class="doc-list">
+                                <div class="doc-item" data-type="circular">
+                                    <div class="doc-info">
+                                        <span class="doc-title">GhIPSS Circular 2026/01</span>
+                                        <span class="doc-meta">Feb 2026 • Circular</span>
+                                    </div>
+                                    <span class="text-pink">↓ PDF</span>
+                                </div>
+                                <div class="doc-item" data-type="report">
+                                    <div class="doc-info">
+                                        <span class="doc-title">Q1 2026 Transaction Report</span>
+                                        <span class="doc-meta">April 2026 • Report</span>
+                                    </div>
+                                    <span class="text-pink">↓ PDF</span>
+                                </div>
+                                <div class="doc-item" data-type="circular">
+                                    <div class="doc-info">
+                                        <span class="doc-title">Operational Guidelines v2.0</span>
+                                        <span class="doc-meta">Jan 2026 • Circular</span>
+                                    </div>
+                                    <span class="text-pink">↓ PDF</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Events -->
+                    <div>
+                        <h3>Seamless Event Registration</h3>
+                        <p>Integrated RSVP for summits and workshops.</p>
+                        <div class="mock-ui">
+                            <h4>2026 Payments Summit</h4>
+                            <p style="color: #777; margin-bottom: 1rem;">Accra International Conference Centre</p>
+                            <button class="btn btn-primary btn-full" id="openModalBtn">Register Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plan & Tech -->
+        <section id="tech" class="section">
+            <div class="container">
+                <h2 class="section-title">Technical Approaches & Timeline</h2>
+                <div class="grid-2">
+                    <div>
+                        <h3>Proposed Stack</h3>
+                        <ul style="list-style: none; margin-top: 1rem;">
+                            <li style="margin-bottom: 1rem;"><strong>⚡ Next.js (React)</strong>: For blazing fast,
+                                SEO-optimized static pages.</li>
+                            <li style="margin-bottom: 1rem;"><strong>🛡️ AWS CloudFront</strong>: Enterprise-grade
+                                security and global CDN delivery.</li>
+                            <li style="margin-bottom: 1rem;"><strong>🎨 Headless CMS</strong>: Empowering the Comms Team
+                                to update content without code.</li>
+                        </ul>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">April 2026</div>
+                            <p>Project Initiation & Discovery</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">May 2026</div>
+                            <p>Design & Development Sprints</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">July 2026</div>
+                            <p>Migration, Testing, & Security Audit</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date" style="color: var(--brand-pink)">31 July 2026</div>
+                            <p><strong>GO LIVE</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team & Pricing -->
+        <section id="pricing" class="section bg-offset">
+            <div class="container">
+                <h2 class="section-title">Commercials</h2>
+                <div class="grid-2">
+                    <div>
+                        <h3>Partnering with Ananseum</h3>
+                        <p>We are a team of fintech specialists committed to digital excellence.</p>
+                        <br>
+                        <h4>Experience</h4>
+                        <p>10+ Years in Digital Banking Solutions.</p>
+                        <br>
+                        <h4>Support SLA</h4>
+                        <p>1 Hour Critical Response Time (24/7).</p>
+                    </div>
+                    <div>
+                        <table class="pricing-table">
+                            <tr>
+                                <td>Discovery & UI/UX Design</td>
+                                <td class="text-right">[PRICE]</td>
+                            </tr>
+                            <tr>
+                                <td>Development & Migration</td>
+                                <td class="text-right">[PRICE]</td>
+                            </tr>
+                            <tr>
+                                <td>Hosting & Security (Annual)</td>
+                                <td class="text-right">[PRICE]</td>
+                            </tr>
+                            <tr>
+                                <td>TOTAL PROJECT COST</td>
+                                <td class="text-right">[TOTAL]</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="compliance" class="section">
+            <div class="container">
+                <h3>Risk Management</h3>
+                <div class="accordion-header">Risk: Scope Creep</div>
+                <div class="accordion-body">Mitigation: Strict Change Request process managed by Ananseum Project Leads.
+                </div>
+
+                <div class="accordion-header">Risk: Security Vulnerabilities</div>
+                <div class="accordion-body">Mitigation: Pre-launch penetration testing and automated WAF deployment.
+                </div>
+            </div>
+        </section>
+
+        <footer class="site-footer" style="padding: 4rem 0; border-top: 1px solid #333; margin-top: 4rem;">
+            <div class="container">
+                <p>&copy; 2026 Ananseum. Creative Web. Smart Tech.</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Modal -->
+    <div id="demoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Complete Registration</h2>
+            <p style="margin-bottom: 2rem; color: #aaa;">Join us at the 2026 Summit.</p>
+            <form
+                onsubmit="event.preventDefault(); alert('Registration sent to Ananseum Demo Server!'); document.getElementById('demoModal').style.display='none';">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Corporate Email" required>
+                <button type="submit" class="btn btn-primary btn-full">Submit RSVP</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
