@@ -248,47 +248,47 @@ export function BookLayout({ children, className }: BookLayoutProps) {
                         animate={{ opacity: 1, y: 0 }}
                         className="fixed bottom-0 left-0 right-0 md:relative md:inset-auto shrink-0 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md border-t border-zinc-200 dark:border-zinc-900 p-4 z-50 w-full print:hidden"
                     >
-                        <div className="max-w-5xl mx-auto flex items-center justify-between">
-                            <div className="flex items-center gap-4">
+                        <div className="max-w-7xl mx-auto flex items-center justify-between relative px-6 w-full">
+                            {/* Left: Previous Button */}
+                            <div className="flex-1 flex justify-start">
                                 <Button
                                     variant="ghost"
                                     size="sm"
                                     onClick={prevPage}
                                     disabled={currentPage === 0}
-                                    className="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white"
+                                    className="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white pl-0 hover:bg-transparent"
                                 >
-                                    <ChevronLeft className="w-4 h-4 mr-2" />
-                                    Previous
+                                    <ChevronLeft className="w-5 h-5 mr-1" />
+                                    <span className="font-medium">Previous</span>
                                 </Button>
-                                <div className="flex flex-col items-center gap-1">
-                                    <div className="relative h-6 w-20 opacity-80 mix-blend-multiply dark:mix-blend-normal">
-                                        <Image
-                                            src="/images/logo-ghipss.jpg"
-                                            alt="GhIPSS"
-                                            fill
-                                            className="object-contain dark:brightness-200"
-                                        />
-                                    </div>
-                                    <div className="text-zinc-500 dark:text-zinc-500 text-xs font-mono hidden sm:block">
-                                        Page {currentPage} of {totalPages - 1}
-                                    </div>
+                            </div>
+
+                            {/* Center: Logo & Page Number */}
+                            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-1 group">
+                                <div className="relative h-10 w-32 md:h-12 md:w-40 transition-transform duration-300 group-hover:scale-105">
+                                    <Image
+                                        src="/images/ghipss-logo.png"
+                                        alt="GhIPSS"
+                                        fill
+                                        className="object-contain dark:brightness-200"
+                                    />
+                                </div>
+                                <div className="text-zinc-400 dark:text-zinc-500 text-[10px] font-mono tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity">
+                                    Page {currentPage} of {totalPages - 1}
                                 </div>
                             </div>
 
-                            <div className="text-zinc-500 text-sm font-mono sm:hidden">
-                                {currentPage} / {totalPages - 1}
-                            </div>
-
-                            <div className="flex items-center gap-4">
+                            {/* Right: Next Button */}
+                            <div className="flex-1 flex justify-end">
                                 <Button
                                     variant="default"
-                                    size="sm"
+                                    size="lg"
                                     onClick={nextPage}
                                     disabled={currentPage >= totalPages - 1}
-                                    className="bg-ghipss-blue hover:bg-[#002244] text-white"
+                                    className="bg-ghipss-blue hover:bg-[#002244] text-white rounded-full px-6 shadow-lg shadow-ghipss-blue/20 hover:shadow-ghipss-blue/40 transition-all font-bold"
                                 >
-                                    Next
-                                    <ChevronRight className="w-4 h-4 ml-2" />
+                                    Next Phase
+                                    <ChevronRight className="w-5 h-5 ml-2" />
                                 </Button>
                             </div>
                         </div>

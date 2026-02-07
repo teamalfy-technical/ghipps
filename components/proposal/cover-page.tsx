@@ -65,7 +65,7 @@ export function CoverPage() {
                     <div className="relative h-32 w-72 flex items-center justify-center">
                         {/* GhIPSS Logo */}
                         <Image
-                            src="/images/logo-ghipss.jpg"
+                            src="/images/ghipss-logo.png"
                             alt="GhIPSS Logo"
                             fill
                             sizes="(max-width: 768px) 100vw, 300px"
