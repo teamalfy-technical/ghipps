@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, Printer } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -158,22 +158,6 @@ export function BookLayout({ children, className, pageTitles }: BookLayoutProps)
 
                 {/* Header Controls */}
                 <div className="absolute top-6 right-6 z-[100] flex items-center gap-2 print:hidden">
-                    {isUnlocked && currentPage > 0 && (
-                        <Button
-                            asChild
-                            variant="ghost"
-                            size="sm"
-                            className="rounded-full bg-white/50 dark:bg-black/50 backdrop-blur border border-zinc-200 dark:border-zinc-800 hover:bg-ghipss-blue hover:text-white transition-colors gap-2"
-                            title="Download PDF"
-                        >
-                            <a href="/ghipps-proposal.pdf" download="GhIPSS_Proposal_Ananseum.pdf">
-                                <Printer className="w-4 h-4" />
-                                <span className="hidden sm:inline text-xs font-bold uppercase tracking-wider">
-                                    Download PDF
-                                </span>
-                            </a>
-                        </Button>
-                    )}
                     <ThemeToggle />
                 </div>
 
