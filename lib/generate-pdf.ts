@@ -33,18 +33,46 @@ export async function generatePdf(elementIds: string[], fileName: string = "ghip
                 backgroundColor: "#ffffff", // Ensure white background
                 windowWidth: 1400, // Force a desktop-like width for consistency
                 onclone: (clonedDoc) => {
-                    // Force light mode on the cloned document for capture
-                    const body = clonedDoc.body;
-                    body.classList.remove("dark");
                     const html = clonedDoc.documentElement;
+                    const body = clonedDoc.body;
+
+                    // 1. Force Light Mode Class/Styles
                     html.classList.remove("dark");
+                    body.classList.remove("dark");
                     html.style.colorScheme = "light";
 
-                    // Optional: Ensure specific elements are visible if they relied on dark mode
+                    // 2. Force CSS Variables to Light Mode
+                    body.style.setProperty("--background", "#ffffff");
+                    body.style.setProperty("--foreground", "#171717");
+                    body.style.backgroundColor = "#ffffff";
+                    body.style.color = "#171717";
+
+                    // 3. AGGRESSIVE: Force visibility of all motion elements
+                    // This targets Framer Motion elements that might be stuck at opacity 0
+                    const allElements = clonedDoc.getElementsByTagName("*");
+                    for (let i = 0; i < allElements.length; i++) {
+                        const el = allElements[i] as HTMLElement;
+                        const style = el.getAttribute("style") || "";
+
+                        // If it has opacity: 0 or is a motion element, force it visible
+                        if (style.includes("opacity: 0") || el.hasAttribute("data-framer-component") || el.className.includes("motion")) {
+                            el.style.setProperty("opacity", "1", "important");
+                            el.style.setProperty("transform", "none", "important");
+                            el.style.setProperty("visibility", "visible", "important");
+                        }
+
+                        // Force background colors on specific sections
+                        if (el.className.includes("bg-zinc-950") || el.className.includes("bg-black")) {
+                            el.style.setProperty("background-color", "#ffffff", "important");
+                            el.style.setProperty("color", "#171717", "important");
+                        }
+                    }
+
+                    // 4. Force container size
                     const container = clonedDoc.querySelector(".print-container") as HTMLElement;
                     if (container) {
+                        container.style.width = "1400px";
                         container.style.backgroundColor = "white";
-                        container.style.color = "black";
                     }
                 }
             });

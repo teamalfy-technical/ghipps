@@ -40,7 +40,6 @@ interface BookLayoutProps {
 }
 
 export function BookLayout({ children, className, pageTitles }: BookLayoutProps) {
-    const [isPrintView, setIsPrintView] = useState(false);
     const [currentPage, setCurrentPage] = useState(0);
     const [isUnlocked, setIsUnlocked] = useState(false);
     const [userName, setUserName] = useState("");
@@ -85,30 +84,6 @@ export function BookLayout({ children, className, pageTitles }: BookLayoutProps)
         }
         setTimeout(scrollToTop, 100);
     };
-
-    useEffect(() => {
-        if (isPrintView) {
-            // Wait for render cycle to complete and assets to load
-            // Increased to 2.5s to ensure heavy page segments (animations, counters) settle
-            const timer = setTimeout(async () => {
-                try {
-                    // Import dynamically to avoid SSR issues
-                    const { generatePdf } = await import("@/lib/generate-pdf");
-
-                    // Generate IDs for the pages we rendered
-                    const pageIds = Array.from({ length: totalPages }).map((_, i) => `proposal-page-${i}`);
-
-                    await generatePdf(pageIds, "Ananseum_GhIPSS_Proposal.pdf");
-                } catch (error) {
-                    console.error("PDF Generation failed:", error);
-                } finally {
-                    // Revert to interactive view after download
-                    setIsPrintView(false);
-                }
-            }, 2500);
-            return () => clearTimeout(timer);
-        }
-    }, [isPrintView, totalPages]);
 
     // Prevent navigation if locked
     useEffect(() => {
@@ -178,25 +153,25 @@ export function BookLayout({ children, className, pageTitles }: BookLayoutProps)
         >
             <div className={cn(
                 "h-full w-full bg-zinc-50 dark:bg-zinc-950 text-foreground overflow-hidden flex flex-col transition-colors duration-300 relative",
-                className,
-                isPrintView && "h-auto overflow-visible"
+                className
             )}>
 
                 {/* Header Controls */}
                 <div className="absolute top-6 right-6 z-[100] flex items-center gap-2 print:hidden">
                     {isUnlocked && currentPage > 0 && (
                         <Button
+                            asChild
                             variant="ghost"
                             size="sm"
-                            onClick={() => setIsPrintView(true)}
                             className="rounded-full bg-white/50 dark:bg-black/50 backdrop-blur border border-zinc-200 dark:border-zinc-800 hover:bg-ghipss-blue hover:text-white transition-colors gap-2"
                             title="Download PDF"
-                            disabled={isPrintView}
                         >
-                            <Printer className="w-4 h-4" />
-                            <span className="hidden sm:inline text-xs font-bold uppercase tracking-wider">
-                                {isPrintView ? "Generating..." : "Download PDF"}
-                            </span>
+                            <a href="/ghipps-proposal.pdf" download="GhIPSS_Proposal_Ananseum.pdf">
+                                <Printer className="w-4 h-4" />
+                                <span className="hidden sm:inline text-xs font-bold uppercase tracking-wider">
+                                    Download PDF
+                                </span>
+                            </a>
                         </Button>
                     )}
                     <ThemeToggle />
@@ -205,45 +180,26 @@ export function BookLayout({ children, className, pageTitles }: BookLayoutProps)
                 {/* Main Content Area */}
                 <div
                     ref={contentRef}
-                    className={cn(
-                        "flex-1 relative overflow-y-auto overflow-x-hidden scroll-smooth pb-20 md:pb-0", // Mobile: add space for fixed nav
-                        isPrintView && "overflow-visible h-auto bg-white" // Force white bg for capture
-                    )}
+                    className="flex-1 relative overflow-y-auto overflow-x-hidden scroll-smooth pb-20 md:pb-0"
                 >
-                    {isPrintView ? (
-                        // Print Mode: Render ALL pages vertically with IDs for capture
-                        <div className="w-full h-auto flex flex-col print-container">
-                            {pages.map((page, index) => (
-                                <div
-                                    key={index}
-                                    id={`proposal-page-${index}`}
-                                    className="w-full min-h-screen break-after-page relative overflow-hidden bg-white dark:bg-zinc-950"
-                                >
-                                    {page}
-                                </div>
-                            ))}
-                        </div>
-                    ) : (
-                        // Interactive Mode: Render active page
-                        <AnimatePresence mode="wait">
-                            <motion.div
-                                key={currentPage}
-                                initial={{ opacity: 0, x: 20 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                exit={{ opacity: 0, x: -20 }}
-                                transition={{ duration: 0.4, ease: "easeInOut" }}
-                                className="w-full h-full flex flex-col"
-                            >
-                                <div className="flex-1 flex flex-col h-full w-full">
-                                    {pages[currentPage]}
-                                </div>
-                            </motion.div>
-                        </AnimatePresence>
-                    )}
+                    <AnimatePresence mode="wait">
+                        <motion.div
+                            key={currentPage}
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: -20 }}
+                            transition={{ duration: 0.4, ease: "easeInOut" }}
+                            className="w-full h-full flex flex-col"
+                        >
+                            <div className="flex-1 flex flex-col h-full w-full">
+                                {pages[currentPage]}
+                            </div>
+                        </motion.div>
+                    </AnimatePresence>
                 </div>
 
-                {/* Navigation Bar - Hidden during print */}
-                {!isPrintView && isUnlocked && currentPage > 0 && (
+                {/* Navigation Bar */}
+                {isUnlocked && currentPage > 0 && (
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
