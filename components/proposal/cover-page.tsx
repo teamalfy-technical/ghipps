@@ -73,13 +73,13 @@ export function CoverPage() {
                         />
                     </div>
                     <div className="h-24 w-px bg-zinc-300 dark:bg-zinc-800" />
-                    <div className="relative h-28 w-72 flex items-center justify-center">
+                    <div className="relative h-28 w-72 flex items-center justify-center bg-white p-4 rounded-lg">
                         {/* Ananseum Logo */}
                         <Image
-                            src="/images/logo-ananseum.png"
+                            src="/ananseum-logo.jpg"
                             alt="Ananseum Logo"
-                            fill
-                            sizes="(max-width: 768px) 100vw, 300px"
+                            width={200}
+                            height={80}
                             className="object-contain"
                         />
                     </div>

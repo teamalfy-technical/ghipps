@@ -86,10 +86,10 @@ export function BookLayout({ children, className, pageTitles }: BookLayoutProps)
         setTimeout(scrollToTop, 100);
     };
 
-    // Print/PDF functionality
     useEffect(() => {
         if (isPrintView) {
             // Wait for render cycle to complete and assets to load
+            // Increased to 2.5s to ensure heavy page segments (animations, counters) settle
             const timer = setTimeout(async () => {
                 try {
                     // Import dynamically to avoid SSR issues
@@ -105,7 +105,7 @@ export function BookLayout({ children, className, pageTitles }: BookLayoutProps)
                     // Revert to interactive view after download
                     setIsPrintView(false);
                 }
-            }, 1000); // 1s wait for Framer Motion / Images to settle
+            }, 2500);
             return () => clearTimeout(timer);
         }
     }, [isPrintView, totalPages]);

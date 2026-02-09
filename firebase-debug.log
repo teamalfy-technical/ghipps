@@ -1,0 +1,188 @@
+[debug] [2026-02-09T10:14:33.964Z] ----------------------------------------------------------------------
+[debug] [2026-02-09T10:14:33.969Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\opare\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2026-02-09T10:14:33.969Z] CLI Version:   15.5.1
+[debug] [2026-02-09T10:14:33.969Z] Platform:      win32
+[debug] [2026-02-09T10:14:33.969Z] Node Version:  v24.13.0
+[debug] [2026-02-09T10:14:33.969Z] Time:          Mon Feb 09 2026 10:14:33 GMT+0000 (Greenwich Mean Time)
+[debug] [2026-02-09T10:14:33.970Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-02-09T10:14:36.936Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-09T10:14:36.936Z] > authorizing via signed-in user (alfyopare@gmail.com)
+[debug] [2026-02-09T10:14:36.937Z] [iam] checking project ghipps-ab56f for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-02-09T10:14:36.938Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:36.938Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:36.939Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ghipps-ab56f:testIamPermissions [none]
+[debug] [2026-02-09T10:14:36.939Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/ghipps-ab56f:testIamPermissions  x-goog-user-project=ghipps-ab56f
+[debug] [2026-02-09T10:14:36.939Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ghipps-ab56f:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-02-09T10:14:38.182Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ghipps-ab56f:testIamPermissions 200
+[debug] [2026-02-09T10:14:38.182Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ghipps-ab56f:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-02-09T10:14:38.183Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:38.183Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:38.183Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ghipps-ab56f [none]
+[debug] [2026-02-09T10:14:39.235Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ghipps-ab56f 200
+[debug] [2026-02-09T10:14:39.235Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ghipps-ab56f {"projectId":"ghipps-ab56f","projectNumber":"779216753944","displayName":"ghipps","name":"projects/ghipps-ab56f","resources":{"hostingSite":"ghipps-ab56f"},"state":"ACTIVE","etag":"1_da68daf0-7f2e-4bf2-9e64-f02614529893"}
+[info] 
+[info] === Deploying to 'ghipps-ab56f'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2026-02-09T10:14:39.241Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:39.241Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:39.241Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ghipps-ab56f/versions [none]
+[debug] [2026-02-09T10:14:39.241Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ghipps-ab56f/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2026-02-09T10:14:41.098Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ghipps-ab56f/versions 200
+[debug] [2026-02-09T10:14:41.098Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ghipps-ab56f/versions {"name":"projects/779216753944/sites/ghipps-ab56f/versions/83ebe19c31519a55","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[ghipps-ab56f]: beginning deploy... 
+[info] i  hosting[ghipps-ab56f]: found 72 files in out 
+[debug] [2026-02-09T10:14:41.119Z] [hosting] uploading with 200 concurrency
+[debug] [2026-02-09T10:14:41.177Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.178Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.179Z] [hosting] hash cache [b3V0] stored for 72 files
+[debug] [2026-02-09T10:14:41.180Z] [hosting][hash queue][FINAL] {"max":44,"min":0,"avg":21.833333333333332,"active":0,"complete":72,"success":72,"errored":0,"retried":0,"total":72,"elapsed":58}
+[debug] [2026-02-09T10:14:41.180Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/779216753944/sites/ghipps-ab56f/versions/83ebe19c31519a55:populateFiles [none]
+[debug] [2026-02-09T10:14:41.180Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/779216753944/sites/ghipps-ab56f/versions/83ebe19c31519a55:populateFiles {"files":{"/window.svg":"6bd2003bd35bb32c1c0d99ab3aeac0cc1edaefd79f27df1d954bc87184048d74","/vercel.svg":"529a1a21b4a82475a82db26173c28d7b27e2dc9d4b900eaf1c5329d96eea4ddd","/secure-login.png":"55021221248e8b49a62a0e054adeb3047bf39ea080bbeea4537f498a2e537d77","/next.svg":"0665b9ab4493aa9d7e988b57024e28772ae543e804b8cf6b0a3633854b7c3c7f","/globe.svg":"6502a3e6120bf2d6e8417e7c40bb57fb8a6954de9c86d3f43076a75b60cd23a2","/file.svg":"5a09df6187e21aa9a7d05094389385876ac93c818e1dcbb77a26a8fe408bf79c","/dashboard-preview.png":"6a2f70126c7e4c1bc5ec274cb197cbc76741ccc38bb822f65d91a95e9b94852e","/dashboard-hero.png":"1146845e5215a78a9c657642d30c4dc7feaad80d7605cdfe420b0a6cbd0e756d","/ananseum-logo.jpg":"d498e632e2f7d380d056205f81b386168b617f1a397c65cbde69d8ee29174969","/ananseum-icon.png":"2d32364e0591e747cb40c99117cacc044399f2d6fcc74b754baaa0a4d9875dec","/__next.__PAGE__.txt":"fa00ad76e344a73cc295b9c9f40bd034733a485c2cbdb3b0216aa50b0db17afb","/__next._tree.txt":"8351fba367407be68edd526d770251a9ba35dad161d870a2adae13987119bf12","/videos/cover-video.mp4":"c6e3cadfa8a10f769fdbd217cf7200ac5c21a1095f9876cd68e0ab9941b0bdfa","/images/logo-ghipss.jpg":"d498e632e2f7d380d056205f81b386168b617f1a397c65cbde69d8ee29174969","/images/logo-ananseum.png":"1b3515eed28cc0f7a0df6fbfcca649410777c34e8ded01bf939f27d74e7bd773","/images/ghipss-logo.png":"1b3515eed28cc0f7a0df6fbfcca649410777c34e8ded01bf939f27d74e7bd773","/images/alfred-profile.jpg":"0979a0b9aba2c4e0eeb20a9b9d3f57d0063c3780e871cf49b38e2f8fe2ce693d","/__next._index.txt":"e836b2d635c5729f956dd85e78ce6f36fd19f32592de99419d33615f1690f518","/__next._head.txt":"8093c2119c4be0d0a763fe7c422aae027b8c96d240e98e646b6738e0b74bea3f","/__next._full.txt":"85df64f96208e58458ace4fa83a8462f0f91d7712a664ce679ea4a99837731e9","/_not-found.html":"b2a45b38ab7b80ef0d5870cec7af8c350a1c46a4c0d798f98a6a6530c7c74edc","/index.txt":"85df64f96208e58458ace4fa83a8462f0f91d7712a664ce679ea4a99837731e9","/_not-found.txt":"153df9d030ff61c6bbedd80b367e7bc5f13fd0760e7fcc036ba638cf89b700ad","/admin.txt":"d57acb141422679e48152be5f797d68f0859e5f2eca5dd1c1f3e7ed732dda166","/index.html":"d7bc11af981a8f5a085f58ab5291f0649925dc0bb12cb58564570f2931068f29","/_not-found/__next._tree.txt":"3f1c511f2190ee1ef94f53167ae275a95faf89ef27ca05a0a887963462c24b3a","/admin.html":"6bfe5f04891fdfe4ee860be1c9cd0d379383e17e59f7d8031623ca1ee2077221","/404.html":"b2a45b38ab7b80ef0d5870cec7af8c350a1c46a4c0d798f98a6a6530c7c74edc","/_not-found/__next._index.txt":"e836b2d635c5729f956dd85e78ce6f36fd19f32592de99419d33615f1690f518","/_not-found/__next._not-found.txt":"94e50bb5a13ba490f5a082a9937eeb22a6eb2b5f02d01f0f618589235da650b7","/_not-found/__next._head.txt":"8f315a98ed77a0422f0328a71451526885d57171fc8fdc94c268528d63200ab9","/_not-found/__next._full.txt":"153df9d030ff61c6bbedd80b367e7bc5f13fd0760e7fcc036ba638cf89b700ad","/_next/static/pEO3bhXxO2ZklHuKM2Mck/_ssgManifest.js":"dc28a4dc92fe352ed5d2201bd3972ce47691bc8e89e0400a68d1541d0567c6d5","/_not-found/__next._not-found/__PAGE__.txt":"a11adcec8de2710975bcfb646527cf1425a3c5b9edc9ac60c68bc9ae82a749a8","/_next/static/pEO3bhXxO2ZklHuKM2Mck/_clientMiddlewareManifest.json":"61663fde99b3394d71653f41c19fe91269442622a4a6695f8352a70fbf5ca4c1","/_next/static/pEO3bhXxO2ZklHuKM2Mck/_buildManifest.js":"dcbe1c9b9159ca21caea98e1bad364012ae284e9551375ca62b83d2811efac91","/_next/static/media/bbc41e54d2fcbd21-s.799d8ef8.woff2":"d4009d939263227ebf50c0795c481e213f357d7420c6e2aeae9e270341c2794e","/_next/static/media/8a480f0b521d4e75-s.8e0177b5.woff2":"8d292901989d49484a1601ca452e9a5867e0bb875ea47ebe965cce34f9ccfe9f","/favicon.ico":"36eaaa9259cda5765c4061fa8b7bf61c74dbda3a2a721a0811c73f5dae61a2e9","/_next/static/chunks/turbopack-aa9a19bb134c15ee.js":"d50ab38c3894d38985118c8e6dd404c693a155501a948eb29b26e88fcee6c3d2","/_next/static/media/4fa387ec64143e14-s.c1fdd6c2.woff2":"b69bc48415f924b2ba601fc1d4e410378fafb8b8835d133b888e023e782ae276","/_next/static/chunks/ff1a16fafef87110.js":"1c5ce9de9f2087594a99c79ed2344979288c2efaeb57adf3aecb7d6c8dfa5bcf","/_next/static/media/7178b3e590c64307-s.b97b3418.woff2":"2435c9cd3d80b370af0d12f1623ee96c47460d286fa4e52e283371b801696fe6","/_next/static/chunks/b10948db64da63fb.js":"ddb5db1efc2220cb5a489180ce837f1a91cfe07b2addd398109d4751d9ab8617","/_next/static/media/favicon.0b3bf435.ico":"36eaaa9259cda5765c4061fa8b7bf61c74dbda3a2a721a0811c73f5dae61a2e9","/_next/static/chunks/d2be314c3ece3fbe.js":"57e59eea60280d8b4821797483ce89dddb4eb8fbf27f60dd186ec8f7d8d055fd","/_next/static/chunks/94547e663292b135.js":"27b2bfe2cbda62260013d67c664d2e114d173c10e940cfd664c5795aae4710fd","/_next/static/chunks/5deb862cb435654c.js":"2185e56233e04b46b7b5c3322e8a3f3fd86fe0c78179a61b45041ba72e20bd4b","/_next/static/chunks/54ab083194d7bfbe.js":"d0790fb92399cd50d009e75d24183ba360817ed5805232c6635ee856e0314771","/_next/static/chunks/0c664fdf4485cf46.js":"e2531387fabe16ee027757e956179b802f5343616237111e738db8558675f399","/_next/static/chunks/049ce48f7172c019.js":"c42387fa3567c16a4b5b548e05c8331851c4b67e0a9ea8df339df15f06ed66a0","/_next/static/media/caa3a2e1cccd8315-s.p.853070df.woff2":"b8beb80fe637dcc578d27d7e150cdee79a0b23985b81868ca8ddd974f26ac166","/_next/static/media/797e433ab948586e-s.p.dbea232f.woff2":"b64ce94058db3b6558b284f93ad64afaddc35ee2ff5e53ce48b833ff3a74e820","/_next/static/chunks/d5c4f4cf519b4bd1.css":"d360ca643ea337c4cb39bad935517c6e7781f8bb8f4252df758a1f2bd841afb1","/_next/static/chunks/a6dad97d9634a72d.js":"18e28d3214eda45048d80d3925ea7627b809e69ad2e95f7f98459e9146a61c3d","/_next/static/chunks/a6dad97d9634a72d.js.map":"25ae05f2ece4bc46d2351a2660b3f4347f1adc4181c38f3f596f60ccd615db6f","/_next/static/chunks/0162ab5a9dd23b0f.js":"f4d1a0c274cd20038328a6d2c7d1ad19c1af39fd43009c4a8b69ab04cfe58275","/admin/__next._tree.txt":"24e09f44ef92875492c3921553d92eb322187fbb610897b2270d8324c677e2b1","/admin/__next._index.txt":"e836b2d635c5729f956dd85e78ce6f36fd19f32592de99419d33615f1690f518","/admin/__next._head.txt":"8093c2119c4be0d0a763fe7c422aae027b8c96d240e98e646b6738e0b74bea3f","/admin/__next._full.txt":"d57acb141422679e48152be5f797d68f0859e5f2eca5dd1c1f3e7ed732dda166","/admin/__next.admin.txt":"94e50bb5a13ba490f5a082a9937eeb22a6eb2b5f02d01f0f618589235da650b7","/admin/__next.admin/__PAGE__.txt":"81ed88612cd60bb69e264e5d752632f082f3f8706a397416b91ffa046f1de0b6","/_next/static/chunks/b8a392715cb48bcd.js":"784806e080d8634af7da74a4c2ee12b2ec7f32195e691ca10ddb82fe7ff5f2d1","/_next/static/chunks/c14890ef0997f7e6.js":"a07bd1278610c2988c5735e50448d1137c28423826c6a6dfa65a19650af4fbcd","/_next/static/chunks/1b4c013b6107f949.js":"b61ab5ae10491e2ae598f5d550a42d78e2495c458c05c560638911ba6ff28076","/_next/static/chunks/62d66b935ead0805.js":"e296e9df4e63d3c318af6337d098309ee02ef331eb213eb172521dcd4add09eb","/_next/static/chunks/34d092d50fcc0bbd.js":"250682b5f2bb77d49c06bf3ed9d73baaa5b071f2abab952d656fd01d047b09bd","/_next/static/chunks/adabfc2d4bff09a9.js":"4e300f4f578321752579e583a964a42cac4f53d39b46d1d8f3224ec53f0988e5","/_next/static/chunks/87b70fa22302d7d0.js":"840058d85c8d84622463be83c189da4159e5c14203c1e7e976799ff970a156e1","/_next/static/chunks/8d9ff77105dcbf6f.js":"94a705d38db8551b57d21628bad425e2355f22136f406e9171ddbfd26fe5fd19","/_next/static/chunks/5a4d2a15520c6054.js":"73b6227df3e9b56f1f39452fec8b1311187b3d135551cfd3e7f7ab2a8ed0ab4c"}}
+[debug] [2026-02-09T10:14:41.956Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/779216753944/sites/ghipps-ab56f/versions/83ebe19c31519a55:populateFiles 200
+[debug] [2026-02-09T10:14:41.956Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/779216753944/sites/ghipps-ab56f/versions/83ebe19c31519a55:populateFiles {"uploadRequiredHashes":["6bfe5f04891fdfe4ee860be1c9cd0d379383e17e59f7d8031623ca1ee2077221","85df64f96208e58458ace4fa83a8462f0f91d7712a664ce679ea4a99837731e9","b61ab5ae10491e2ae598f5d550a42d78e2495c458c05c560638911ba6ff28076","a11adcec8de2710975bcfb646527cf1425a3c5b9edc9ac60c68bc9ae82a749a8","27b2bfe2cbda62260013d67c664d2e114d173c10e940cfd664c5795aae4710fd","d57acb141422679e48152be5f797d68f0859e5f2eca5dd1c1f3e7ed732dda166","3f1c511f2190ee1ef94f53167ae275a95faf89ef27ca05a0a887963462c24b3a","8f315a98ed77a0422f0328a71451526885d57171fc8fdc94c268528d63200ab9","d7bc11af981a8f5a085f58ab5291f0649925dc0bb12cb58564570f2931068f29","8093c2119c4be0d0a763fe7c422aae027b8c96d240e98e646b6738e0b74bea3f","fa00ad76e344a73cc295b9c9f40bd034733a485c2cbdb3b0216aa50b0db17afb","153df9d030ff61c6bbedd80b367e7bc5f13fd0760e7fcc036ba638cf89b700ad","b2a45b38ab7b80ef0d5870cec7af8c350a1c46a4c0d798f98a6a6530c7c74edc","e836b2d635c5729f956dd85e78ce6f36fd19f32592de99419d33615f1690f518","8351fba367407be68edd526d770251a9ba35dad161d870a2adae13987119bf12","94e50bb5a13ba490f5a082a9937eeb22a6eb2b5f02d01f0f618589235da650b7","81ed88612cd60bb69e264e5d752632f082f3f8706a397416b91ffa046f1de0b6","24e09f44ef92875492c3921553d92eb322187fbb610897b2270d8324c677e2b1","94a705d38db8551b57d21628bad425e2355f22136f406e9171ddbfd26fe5fd19"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files"}
+[debug] [2026-02-09T10:14:41.956Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.956Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.957Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.957Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.957Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.957Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.957Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.957Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.957Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.957Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.957Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.957Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.957Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.957Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.958Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.958Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.958Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.958Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.958Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.958Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.958Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.958Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.958Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.958Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.958Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.958Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.958Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.958Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.958Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.958Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.959Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.959Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.959Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.959Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.959Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.959Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.959Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.959Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:41.959Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/6bfe5f04891fdfe4ee860be1c9cd0d379383e17e59f7d8031623ca1ee2077221 [none]
+[debug] [2026-02-09T10:14:41.959Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/6bfe5f04891fdfe4ee860be1c9cd0d379383e17e59f7d8031623ca1ee2077221 [stream]
+[debug] [2026-02-09T10:14:41.961Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/85df64f96208e58458ace4fa83a8462f0f91d7712a664ce679ea4a99837731e9 [none]
+[debug] [2026-02-09T10:14:41.961Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/85df64f96208e58458ace4fa83a8462f0f91d7712a664ce679ea4a99837731e9 [stream]
+[debug] [2026-02-09T10:14:41.962Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/b61ab5ae10491e2ae598f5d550a42d78e2495c458c05c560638911ba6ff28076 [none]
+[debug] [2026-02-09T10:14:41.962Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/b61ab5ae10491e2ae598f5d550a42d78e2495c458c05c560638911ba6ff28076 [stream]
+[debug] [2026-02-09T10:14:41.963Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/a11adcec8de2710975bcfb646527cf1425a3c5b9edc9ac60c68bc9ae82a749a8 [none]
+[debug] [2026-02-09T10:14:41.963Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/a11adcec8de2710975bcfb646527cf1425a3c5b9edc9ac60c68bc9ae82a749a8 [stream]
+[debug] [2026-02-09T10:14:41.964Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/27b2bfe2cbda62260013d67c664d2e114d173c10e940cfd664c5795aae4710fd [none]
+[debug] [2026-02-09T10:14:41.964Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/27b2bfe2cbda62260013d67c664d2e114d173c10e940cfd664c5795aae4710fd [stream]
+[debug] [2026-02-09T10:14:41.965Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/d57acb141422679e48152be5f797d68f0859e5f2eca5dd1c1f3e7ed732dda166 [none]
+[debug] [2026-02-09T10:14:41.965Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/d57acb141422679e48152be5f797d68f0859e5f2eca5dd1c1f3e7ed732dda166 [stream]
+[debug] [2026-02-09T10:14:41.966Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/3f1c511f2190ee1ef94f53167ae275a95faf89ef27ca05a0a887963462c24b3a [none]
+[debug] [2026-02-09T10:14:41.966Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/3f1c511f2190ee1ef94f53167ae275a95faf89ef27ca05a0a887963462c24b3a [stream]
+[debug] [2026-02-09T10:14:41.967Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/8f315a98ed77a0422f0328a71451526885d57171fc8fdc94c268528d63200ab9 [none]
+[debug] [2026-02-09T10:14:41.967Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/8f315a98ed77a0422f0328a71451526885d57171fc8fdc94c268528d63200ab9 [stream]
+[debug] [2026-02-09T10:14:41.968Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/d7bc11af981a8f5a085f58ab5291f0649925dc0bb12cb58564570f2931068f29 [none]
+[debug] [2026-02-09T10:14:41.968Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/d7bc11af981a8f5a085f58ab5291f0649925dc0bb12cb58564570f2931068f29 [stream]
+[debug] [2026-02-09T10:14:41.969Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/8093c2119c4be0d0a763fe7c422aae027b8c96d240e98e646b6738e0b74bea3f [none]
+[debug] [2026-02-09T10:14:41.969Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/8093c2119c4be0d0a763fe7c422aae027b8c96d240e98e646b6738e0b74bea3f [stream]
+[debug] [2026-02-09T10:14:41.970Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/fa00ad76e344a73cc295b9c9f40bd034733a485c2cbdb3b0216aa50b0db17afb [none]
+[debug] [2026-02-09T10:14:41.970Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/fa00ad76e344a73cc295b9c9f40bd034733a485c2cbdb3b0216aa50b0db17afb [stream]
+[debug] [2026-02-09T10:14:41.972Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/153df9d030ff61c6bbedd80b367e7bc5f13fd0760e7fcc036ba638cf89b700ad [none]
+[debug] [2026-02-09T10:14:41.972Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/153df9d030ff61c6bbedd80b367e7bc5f13fd0760e7fcc036ba638cf89b700ad [stream]
+[debug] [2026-02-09T10:14:41.973Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/b2a45b38ab7b80ef0d5870cec7af8c350a1c46a4c0d798f98a6a6530c7c74edc [none]
+[debug] [2026-02-09T10:14:41.973Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/b2a45b38ab7b80ef0d5870cec7af8c350a1c46a4c0d798f98a6a6530c7c74edc [stream]
+[debug] [2026-02-09T10:14:41.974Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/e836b2d635c5729f956dd85e78ce6f36fd19f32592de99419d33615f1690f518 [none]
+[debug] [2026-02-09T10:14:41.974Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/e836b2d635c5729f956dd85e78ce6f36fd19f32592de99419d33615f1690f518 [stream]
+[debug] [2026-02-09T10:14:41.975Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/8351fba367407be68edd526d770251a9ba35dad161d870a2adae13987119bf12 [none]
+[debug] [2026-02-09T10:14:41.975Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/8351fba367407be68edd526d770251a9ba35dad161d870a2adae13987119bf12 [stream]
+[debug] [2026-02-09T10:14:41.976Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/94e50bb5a13ba490f5a082a9937eeb22a6eb2b5f02d01f0f618589235da650b7 [none]
+[debug] [2026-02-09T10:14:41.976Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/94e50bb5a13ba490f5a082a9937eeb22a6eb2b5f02d01f0f618589235da650b7 [stream]
+[debug] [2026-02-09T10:14:41.977Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/81ed88612cd60bb69e264e5d752632f082f3f8706a397416b91ffa046f1de0b6 [none]
+[debug] [2026-02-09T10:14:41.977Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/81ed88612cd60bb69e264e5d752632f082f3f8706a397416b91ffa046f1de0b6 [stream]
+[debug] [2026-02-09T10:14:41.978Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/24e09f44ef92875492c3921553d92eb322187fbb610897b2270d8324c677e2b1 [none]
+[debug] [2026-02-09T10:14:41.978Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/24e09f44ef92875492c3921553d92eb322187fbb610897b2270d8324c677e2b1 [stream]
+[debug] [2026-02-09T10:14:41.979Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/94a705d38db8551b57d21628bad425e2355f22136f406e9171ddbfd26fe5fd19 [none]
+[debug] [2026-02-09T10:14:41.979Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/94a705d38db8551b57d21628bad425e2355f22136f406e9171ddbfd26fe5fd19 [stream]
+[debug] [2026-02-09T10:14:41.980Z] [hosting][populate queue][FINAL] {"max":782,"min":782,"avg":782,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":803}
+[debug] [2026-02-09T10:14:41.980Z] [hosting] uploads queued: 19
+[debug] [2026-02-09T10:14:43.324Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/d57acb141422679e48152be5f797d68f0859e5f2eca5dd1c1f3e7ed732dda166 200
+[debug] [2026-02-09T10:14:43.324Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/d57acb141422679e48152be5f797d68f0859e5f2eca5dd1c1f3e7ed732dda166 [stream]
+[debug] [2026-02-09T10:14:43.377Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/b2a45b38ab7b80ef0d5870cec7af8c350a1c46a4c0d798f98a6a6530c7c74edc 200
+[debug] [2026-02-09T10:14:43.377Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/b2a45b38ab7b80ef0d5870cec7af8c350a1c46a4c0d798f98a6a6530c7c74edc [stream]
+[debug] [2026-02-09T10:14:43.459Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/85df64f96208e58458ace4fa83a8462f0f91d7712a664ce679ea4a99837731e9 200
+[debug] [2026-02-09T10:14:43.459Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/85df64f96208e58458ace4fa83a8462f0f91d7712a664ce679ea4a99837731e9 [stream]
+[debug] [2026-02-09T10:14:43.491Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/94e50bb5a13ba490f5a082a9937eeb22a6eb2b5f02d01f0f618589235da650b7 200
+[debug] [2026-02-09T10:14:43.491Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/94e50bb5a13ba490f5a082a9937eeb22a6eb2b5f02d01f0f618589235da650b7 [stream]
+[debug] [2026-02-09T10:14:43.502Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/fa00ad76e344a73cc295b9c9f40bd034733a485c2cbdb3b0216aa50b0db17afb 200
+[debug] [2026-02-09T10:14:43.502Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/fa00ad76e344a73cc295b9c9f40bd034733a485c2cbdb3b0216aa50b0db17afb [stream]
+[debug] [2026-02-09T10:14:43.577Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/6bfe5f04891fdfe4ee860be1c9cd0d379383e17e59f7d8031623ca1ee2077221 200
+[debug] [2026-02-09T10:14:43.577Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/6bfe5f04891fdfe4ee860be1c9cd0d379383e17e59f7d8031623ca1ee2077221 [stream]
+[debug] [2026-02-09T10:14:43.584Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/8093c2119c4be0d0a763fe7c422aae027b8c96d240e98e646b6738e0b74bea3f 200
+[debug] [2026-02-09T10:14:43.584Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/8093c2119c4be0d0a763fe7c422aae027b8c96d240e98e646b6738e0b74bea3f [stream]
+[debug] [2026-02-09T10:14:43.616Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/b61ab5ae10491e2ae598f5d550a42d78e2495c458c05c560638911ba6ff28076 200
+[debug] [2026-02-09T10:14:43.616Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/b61ab5ae10491e2ae598f5d550a42d78e2495c458c05c560638911ba6ff28076 [stream]
+[debug] [2026-02-09T10:14:43.636Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/8f315a98ed77a0422f0328a71451526885d57171fc8fdc94c268528d63200ab9 200
+[debug] [2026-02-09T10:14:43.636Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/8f315a98ed77a0422f0328a71451526885d57171fc8fdc94c268528d63200ab9 [stream]
+[debug] [2026-02-09T10:14:43.646Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/3f1c511f2190ee1ef94f53167ae275a95faf89ef27ca05a0a887963462c24b3a 200
+[debug] [2026-02-09T10:14:43.646Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/3f1c511f2190ee1ef94f53167ae275a95faf89ef27ca05a0a887963462c24b3a [stream]
+[debug] [2026-02-09T10:14:43.658Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/d7bc11af981a8f5a085f58ab5291f0649925dc0bb12cb58564570f2931068f29 200
+[debug] [2026-02-09T10:14:43.658Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/d7bc11af981a8f5a085f58ab5291f0649925dc0bb12cb58564570f2931068f29 [stream]
+[debug] [2026-02-09T10:14:43.678Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/24e09f44ef92875492c3921553d92eb322187fbb610897b2270d8324c677e2b1 200
+[debug] [2026-02-09T10:14:43.678Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/24e09f44ef92875492c3921553d92eb322187fbb610897b2270d8324c677e2b1 [stream]
+[debug] [2026-02-09T10:14:43.744Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/27b2bfe2cbda62260013d67c664d2e114d173c10e940cfd664c5795aae4710fd 200
+[debug] [2026-02-09T10:14:43.745Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/27b2bfe2cbda62260013d67c664d2e114d173c10e940cfd664c5795aae4710fd [stream]
+[debug] [2026-02-09T10:14:43.756Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/e836b2d635c5729f956dd85e78ce6f36fd19f32592de99419d33615f1690f518 200
+[debug] [2026-02-09T10:14:43.757Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/e836b2d635c5729f956dd85e78ce6f36fd19f32592de99419d33615f1690f518 [stream]
+[debug] [2026-02-09T10:14:43.867Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/153df9d030ff61c6bbedd80b367e7bc5f13fd0760e7fcc036ba638cf89b700ad 200
+[debug] [2026-02-09T10:14:43.867Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/153df9d030ff61c6bbedd80b367e7bc5f13fd0760e7fcc036ba638cf89b700ad [stream]
+[debug] [2026-02-09T10:14:43.977Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/94a705d38db8551b57d21628bad425e2355f22136f406e9171ddbfd26fe5fd19 200
+[debug] [2026-02-09T10:14:43.977Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/94a705d38db8551b57d21628bad425e2355f22136f406e9171ddbfd26fe5fd19 [stream]
+[debug] [2026-02-09T10:14:43.990Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/8351fba367407be68edd526d770251a9ba35dad161d870a2adae13987119bf12 200
+[debug] [2026-02-09T10:14:43.991Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/8351fba367407be68edd526d770251a9ba35dad161d870a2adae13987119bf12 [stream]
+[debug] [2026-02-09T10:14:44.159Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/a11adcec8de2710975bcfb646527cf1425a3c5b9edc9ac60c68bc9ae82a749a8 200
+[debug] [2026-02-09T10:14:44.160Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/a11adcec8de2710975bcfb646527cf1425a3c5b9edc9ac60c68bc9ae82a749a8 [stream]
+[debug] [2026-02-09T10:14:44.272Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/81ed88612cd60bb69e264e5d752632f082f3f8706a397416b91ffa046f1de0b6 200
+[debug] [2026-02-09T10:14:44.272Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/ghipps-ab56f/versions/83ebe19c31519a55/files/81ed88612cd60bb69e264e5d752632f082f3f8706a397416b91ffa046f1de0b6 [stream]
+[debug] [2026-02-09T10:14:44.272Z] [hosting][upload queue][FINAL] {"max":2313,"min":1367,"avg":1743.421052631579,"active":0,"complete":19,"success":19,"errored":0,"retried":0,"total":19,"elapsed":2316}
+[info] +  hosting[ghipps-ab56f]: file upload complete 
+[debug] [2026-02-09T10:14:44.273Z] [hosting] deploy completed after 3172ms
+[debug] [2026-02-09T10:14:44.273Z] [
+  {
+    "config": {
+      "public": "out",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "ghipps-ab56f"
+    },
+    "version": "projects/779216753944/sites/ghipps-ab56f/versions/83ebe19c31519a55"
+  }
+]
+[info] i  hosting[ghipps-ab56f]: finalizing version... 
+[debug] [2026-02-09T10:14:44.275Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:44.276Z] Checked if tokens are valid: true, expires at: 1770635256033
+[debug] [2026-02-09T10:14:44.276Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ghipps-ab56f/versions/83ebe19c31519a55 updateMask=status%2Cconfig
+[debug] [2026-02-09T10:14:44.276Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/ghipps-ab56f/versions/83ebe19c31519a55 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}

@@ -31,7 +31,22 @@ export async function generatePdf(elementIds: string[], fileName: string = "ghip
                 useCORS: true,
                 logging: false,
                 backgroundColor: "#ffffff", // Ensure white background
-                windowWidth: 1400 // Force a desktop-like width for consistency
+                windowWidth: 1400, // Force a desktop-like width for consistency
+                onclone: (clonedDoc) => {
+                    // Force light mode on the cloned document for capture
+                    const body = clonedDoc.body;
+                    body.classList.remove("dark");
+                    const html = clonedDoc.documentElement;
+                    html.classList.remove("dark");
+                    html.style.colorScheme = "light";
+
+                    // Optional: Ensure specific elements are visible if they relied on dark mode
+                    const container = clonedDoc.querySelector(".print-container") as HTMLElement;
+                    if (container) {
+                        container.style.backgroundColor = "white";
+                        container.style.color = "black";
+                    }
+                }
             });
 
             const imgData = canvas.toDataURL("image/jpeg", 0.95);
