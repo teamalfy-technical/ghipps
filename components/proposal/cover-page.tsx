@@ -73,7 +73,7 @@ export function CoverPage() {
                         />
                     </div>
                     <div className="h-24 w-px bg-zinc-300 dark:bg-zinc-800" />
-                    <div className="relative h-28 w-72 flex items-center justify-center bg-white p-4 rounded-lg">
+                    <div className="relative h-28 w-72 flex items-center justify-center">
                         {/* Ananseum Logo */}
                         <Image
                             src="/ananseum-logo.jpg"
