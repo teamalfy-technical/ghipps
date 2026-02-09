@@ -164,14 +164,14 @@ export function FinalPage() {
 
                             <div className="relative pl-8">
                                 <div className="absolute left-0 top-1 w-6 h-6 rounded-full bg-zinc-800 border-2 border-zinc-600 text-[10px] font-bold flex items-center justify-center">2</div>
-                                <h4 className="font-bold text-white text-lg mb-1">Kickoff Workshop</h4>
-                                <p className="text-sm text-zinc-400">60-90 min session to confirm priorities & timeline.</p>
+                                <h4 className="font-bold text-white text-lg mb-1">Mobilisation (50%)</h4>
+                                <p className="text-sm text-zinc-400">Payment processed & delivery begins immediately.</p>
                             </div>
 
                             <div className="relative pl-8">
                                 <div className="absolute left-0 top-1 w-6 h-6 rounded-full bg-zinc-800 border-2 border-zinc-600 text-[10px] font-bold flex items-center justify-center">3</div>
-                                <h4 className="font-bold text-white text-lg mb-1">Mobilisation (50%)</h4>
-                                <p className="text-sm text-zinc-400">Payment processed & delivery begins immediately.</p>
+                                <h4 className="font-bold text-white text-lg mb-1">Kickoff Workshop</h4>
+                                <p className="text-sm text-zinc-400">60-90 min session to confirm priorities & timeline.</p>
                             </div>
                         </div>
                     </div>
