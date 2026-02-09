@@ -182,16 +182,7 @@ export function InvestmentPage() {
                         </div>
                     </div>
 
-                    {/* Navigation Hint */}
-                    <div className="flex justify-end pt-4">
-                        <div className="group cursor-pointer flex flex-col items-end">
-                            <span className="text-[10px] uppercase tracking-widest text-ghipss-blue mb-1 font-semibold">Next Up</span>
-                            <div className="flex items-center gap-2 text-white font-bold text-lg hover:underline decoration-ghipss-blue decoration-2 underline-offset-4 transition-all">
-                                Why Ananseum?
-                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform text-ghipss-blue" />
-                            </div>
-                        </div>
-                    </div>
+
 
                 </motion.div>
             </div>

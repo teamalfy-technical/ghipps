@@ -213,10 +213,7 @@ export function StructurePage() {
                     </div>
                 </div>
 
-                <div className="flex items-center gap-2 group cursor-pointer hover:text-ghipss-blue transition-colors ml-4 shrink-0">
-                    <span className="font-bold text-zinc-900 dark:text-white uppercase tracking-wider text-xs">Next: UX/UI Direction</span>
-                    <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
-                </div>
+
             </div>
 
         </div>

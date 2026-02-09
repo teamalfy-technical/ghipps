@@ -16,7 +16,19 @@ export default function Home() {
   return (
     // Force main to take full viewport height and width, removing default browser margins/scroll if any
     <main className="h-screen w-screen overflow-hidden bg-zinc-950">
-      <BookLayout>
+      <BookLayout pageTitles={[
+        "Cover",
+        "Introduction",
+        "Strategy & Objectives",
+        "Proposed Site Structure",
+        "UX/UI Direction",
+        "Technical Approach",
+        "Migration & Go-Live",
+        "Timeline & Milestones",
+        "Support & SLA",
+        "Investment Breakdown",
+        "Request Demo"
+      ]}>
         {/* Page 0: Cover */}
         <CoverPage />
 

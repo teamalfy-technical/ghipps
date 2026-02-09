@@ -36,9 +36,10 @@ export function useBook() {
 interface BookLayoutProps {
     children: React.ReactNode[];
     className?: string;
+    pageTitles?: string[];
 }
 
-export function BookLayout({ children, className }: BookLayoutProps) {
+export function BookLayout({ children, className, pageTitles }: BookLayoutProps) {
     const [isPrintView, setIsPrintView] = useState(false);
     const [currentPage, setCurrentPage] = useState(0);
     const [isUnlocked, setIsUnlocked] = useState(false);
@@ -285,10 +286,13 @@ export function BookLayout({ children, className }: BookLayoutProps) {
                                     size="lg"
                                     onClick={nextPage}
                                     disabled={currentPage >= totalPages - 1}
-                                    className="bg-ghipss-blue hover:bg-[#002244] text-white rounded-full px-6 shadow-lg shadow-ghipss-blue/20 hover:shadow-ghipss-blue/40 transition-all font-bold"
+                                    className="bg-ghipss-blue hover:bg-[#002244] text-white rounded-full px-6 shadow-lg shadow-ghipss-blue/20 hover:shadow-ghipss-blue/40 transition-all font-bold group"
                                 >
-                                    Next Phase
-                                    <ChevronRight className="w-5 h-5 ml-2" />
+                                    <span className="flex flex-col items-start text-left mr-1">
+                                        <span className="text-[10px] uppercase opacity-70 font-normal tracking-wider leading-none mb-0.5">Next Phase</span>
+                                        <span className="text-sm">{pageTitles?.[currentPage + 1] || "Next"}</span>
+                                    </span>
+                                    <ChevronRight className="w-5 h-5 ml-1 group-hover:translate-x-1 transition-transform" />
                                 </Button>
                             </div>
                         </div>
