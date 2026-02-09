@@ -87,7 +87,7 @@ export function TimelinePage() {
                             Page 7 — Planning
                         </div>
                         <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white mb-6">
-                            Timeline & <br /><span className="text-ghipss-blue">Milestones.</span>
+                            Timeline & <br /><span className="text-ghipss-blue">Milestones (to 31 July 2026).</span>
                         </h2>
                         <p className="text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
                             We deliver in clear phases with review gates, so GhIPSS stays in control and progress is visible at every step.

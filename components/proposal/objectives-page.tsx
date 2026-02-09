@@ -78,7 +78,7 @@ export function ObjectivesPage() {
                             Page 2 — Strategy
                         </div>
                         <h2 className="text-4xl md:text-5xl font-bold text-zinc-900 dark:text-white mb-6 tracking-tight">
-                            Objectives <span className="text-ghipss-blue">.</span>
+                            Objectives & Success <span className="text-ghipss-blue">Criteria.</span>
                         </h2>
                         <p className="text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed font-light">
                             We are building a platform that balances <span className="text-zinc-900 dark:text-white font-medium">national authority</span> with <span className="text-zinc-900 dark:text-white font-medium">modern digital agility</span>.

@@ -18,16 +18,16 @@ export default function Home() {
     <main className="h-screen w-screen overflow-hidden bg-zinc-950">
       <BookLayout pageTitles={[
         "Cover",
-        "Introduction",
-        "Strategy & Objectives",
-        "Proposed Site Structure",
-        "UX/UI Direction",
-        "Technical Approach",
-        "Migration & Go-Live",
-        "Timeline & Milestones",
-        "Support & SLA",
-        "Investment Breakdown",
-        "Request Demo"
+        "How This Proposal Is Organised",
+        "Objectives & Success Criteria",
+        "Proposed Site Structure (Information Architecture)",
+        "UX/UI Direction & Content Approach",
+        "Technical Approach (Build, Hosting, Security)",
+        "Migration, QA Testing & Go-Live Plan",
+        "Timeline & Milestones (to 31 July 2026)",
+        "Support, Maintenance & Service Levels",
+        "Investment Summary",
+        "Team & Relevant Work"
       ]}>
         {/* Page 0: Cover */}
         <CoverPage />

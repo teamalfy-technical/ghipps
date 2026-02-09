@@ -46,7 +46,7 @@ export function TechApproachPage() {
                             Page 5 — Technical Approach
                         </div>
                         <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white mb-6">
-                            Critical <span className="text-ghipss-blue">Infrastructure.</span>
+                            Technical Approach <br /><span className="text-ghipss-blue">(Build, Hosting, Security).</span>
                         </h2>
                         <p className="text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed font-light">
                             Secure by default, fast under load, and built to scale. We treat your website like the financial critical infrastructure it represents.

@@ -45,7 +45,7 @@ export function MigrationPage() {
                             Page 6 — Execution
                         </div>
                         <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white mb-6">
-                            Migration, QA & <br /><span className="text-ghipss-blue">Go-Live.</span>
+                            Migration, QA Testing & <br /><span className="text-ghipss-blue">Go-Live Plan.</span>
                         </h2>
                         <p className="text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed font-light">
                             We test the site like a product, not a brochure. A smooth transition with minimal downtime and zero data loss.

@@ -48,7 +48,7 @@ export function UxUiPage() {
                             Page 4 — UX/UI Direction
                         </div>
                         <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white mb-6">
-                            Design that builds <br /><span className="text-ghipss-blue">Trust.</span>
+                            UX/UI Direction & <br /><span className="text-ghipss-blue">Content Approach.</span>
                         </h2>
                         <p className="text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
                             Our approach balances institutional authority with modern digital agility. We don't just decorate; we design for clarity and discoverability.

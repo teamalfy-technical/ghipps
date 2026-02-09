@@ -75,7 +75,7 @@ export function StructurePage() {
                             Page 3 — Information Architecture
                         </div>
                         <h2 className="text-2xl md:text-3xl font-bold text-zinc-900 dark:text-white mb-1">
-                            Proposed Site Structure
+                            Proposed Site Structure (Information Architecture)
                         </h2>
                         <p className="text-sm text-zinc-600 dark:text-zinc-400 max-w-2xl">
                             A simple, confident structure: <span className="text-zinc-900 dark:text-white font-medium italic">"Who is GhIPSS? What do you run? Where are the documents?"</span>

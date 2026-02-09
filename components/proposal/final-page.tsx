@@ -89,10 +89,10 @@ export function FinalPage() {
                     {/* Header */}
                     <div>
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-ghipss-blue/10 text-ghipss-blue text-[10px] font-bold tracking-wider uppercase border border-ghipss-blue/20 mb-4">
-                            Page 11 — Decision
+                            Page 10 — Decision
                         </div>
                         <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white mb-6">
-                            Built for <br /><span className="text-ghipss-blue">National Trust.</span>
+                            Team & <br /><span className="text-ghipss-blue">Relevant Work.</span>
                         </h2>
                         <p className="text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed font-light">
                             Thank you. This proposal is designed around one outcome: A website that feels like national infrastructure—credible, clear, secure, and always-on.
